@@ -4,10 +4,21 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <jta-data-source>java:jboss/datasources/ExampleDS</jta-data-source>
         <properties>
-            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" />
+            <property name="javax.persistence.jdbc.Driver" value="org.h2.Driver"/>
+            
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:test"/>
+            <property name="javax.persistence.jdbc.user" value="sa"/>
+            <property name="javax.persistence.jdbc.password" value="sa"/>
+
             <property name="hibernate.max_fetch_depth" value="3" />
             <property name="hibernate.hbm2ddl.auto" value="update" />
             <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" />
+
+            <property name="javax.persistence.schema-generation.create-script-source" value="META-INF/create.sql"/>
+            <property name="javax.persistence.sql-load-script-source" value="META-INF/load.sql"/>
         </properties>
     </persistence-unit>
 </persistence>

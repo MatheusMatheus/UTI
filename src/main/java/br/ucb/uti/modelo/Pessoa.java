@@ -1,15 +1,32 @@
 package br.ucb.uti.modelo;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
+import javax.json.bind.annotation.JsonbProperty;
+import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Size;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
 @Getter
 @Setter
-@AllArgsConstructor
+@Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Pessoa {
-    private String nome;
+
+    @Id
+    @Column(length = 11)
+    @Size(min = 11, max = 11)
     private String cpf;
+
+    @Column(nullable = false)
+    private String nome;
+
+    @Embedded
     private Contato contato;
+
+    @Embedded
     private Endereco endereco;
 }

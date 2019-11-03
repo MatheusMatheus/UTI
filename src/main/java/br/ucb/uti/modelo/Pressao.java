@@ -1,13 +1,21 @@
 package br.ucb.uti.modelo;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 @Getter
 @Setter
-@Builder
+@Embeddable
 public class Pressao {
+
+    @Column(nullable = false)
     private double sistolica;
+
+    @Column(nullable = false)
     private double diastolica;
 }

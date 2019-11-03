@@ -1,18 +1,34 @@
 package br.ucb.uti.modelo;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
+import javax.json.bind.annotation.JsonbDateFormat;
+import javax.persistence.*;
 import java.time.LocalDate;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 @Getter
 @Setter
-@Builder
+@Entity
 public class Terminal {
+
+    @Id
+    @GeneratedValue
+    private Integer identificador;
+
+    @Column(nullable = false)
     private String nome;
-    private int identificador;
+
+    @Column(nullable = false, unique = true)
     private String mac;
+
+    @Column(nullable = false)
+    @JsonbDateFormat(value = "dd/MM/yyyy")
     private LocalDate dataCadastro;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private StatusTerminal statusTerminal;
 }

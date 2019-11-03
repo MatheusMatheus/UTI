@@ -1,18 +1,28 @@
 package br.ucb.uti.modelo;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.OneToOne;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+@Builder
 @Getter
 @Setter
-public class Paciente extends Pessoa{
-    private AtributoMonitoravel atributoMonitoravel;
+@Entity(name = "Paciente")
+public class Paciente extends Pessoa {
+
+    @OneToOne(
+            cascade = CascadeType.ALL,
+            orphanRemoval = true)
+    private EstadoPaciente estadoPaciente;
 
     @Builder
-    public Paciente(String nome, String cpf, Contato contato, Endereco endereco, AtributoMonitoravel atributoMonitoravel) {
+    public Paciente(String nome, String cpf, Contato contato, Endereco endereco, EstadoPaciente estadoPaciente) {
         super(nome, cpf, contato, endereco);
-        this.atributoMonitoravel = atributoMonitoravel;
+        this.estadoPaciente = estadoPaciente;
     }
-
 }

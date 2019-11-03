@@ -19,7 +19,11 @@ public class DAOImpl<T> implements DAO<T> {
 
     @Override
     public void insert(T entidade) {
-        this.manager.persist(entidade);
+        try {
+            this.manager.persist(entidade);
+        } catch (Exception e) {
+
+        }
     }
 
     @Override
