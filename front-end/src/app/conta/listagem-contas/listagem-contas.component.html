@@ -1,0 +1,37 @@
+<fieldset>
+  <legend>Contas</legend>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Agencia</th>
+      <th>Número</th>
+      <th>Saldo</th>
+      <th>Tipo</th>
+      <th>Titular</th>
+      <th>Estado</th>
+      <th>Data de aniversário</th>
+    </tr>
+
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let conta of contas"
+        (click)="seleciona(conta)">
+      <td>{{conta.agencia}}</td>
+      <td>{{conta.numero}}</td>
+      <td>
+        <ng-container *ngIf="conta.estado == 'ATIVA'">
+          {{conta.saldo | currency:'R$'}}
+        </ng-container>
+      </td>
+      <td>{{conta.tipo | tipoConta}}</td>
+      <td>{{conta.titular.nome}}</td>
+      <td>{{conta.estado | estadoConta}}</td>
+      <td>{{conta.diaDeAniversario}}</td>
+    </tr>
+
+    </tbody>
+  </table>
+
+</fieldset>

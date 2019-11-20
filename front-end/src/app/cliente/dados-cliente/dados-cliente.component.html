@@ -1,0 +1,11 @@
+<label>CPF:</label> {{ cliente.cpf | cpf }}<br/>
+<div (click)="clickName()">
+  <label >Nome:</label> {{cliente.nome}}<br/>
+</div>
+<label>Situação:</label>
+  <i *ngIf="cliente.status == 'ATIVO'"
+    class="fa fa-smile-o"></i>
+  <i *ngIf="cliente.status == 'INATIVO'"
+    class="fa fa-circle-o"></i>
+  {{ cliente.status | statusCliente }}
+<br/>

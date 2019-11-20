@@ -1,0 +1,27 @@
+<fieldset>
+  <legend>Clientes</legend>
+
+  <table >
+    <thead>
+    <tr>
+      <th>CPF</th>
+      <th>Nome</th>
+      <th>Status</th>
+    </tr>
+
+    </thead>
+
+    <tbody [@showLines]="clientes?.length > 0 ? 'show' : 'hide'">
+
+      <tr *ngFor="let cliente of clientes"
+          (click)="seleciona(cliente)"
+          class="cliente">
+        <td>{{cliente.cpf | cpf}}</td>
+        <td>{{cliente.nome}}</td>
+        <td>{{cliente.status | statusCliente}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</fieldset>

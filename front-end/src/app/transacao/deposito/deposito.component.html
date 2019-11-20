@@ -1,0 +1,33 @@
+<fieldset>
+  <legend>Depósito</legend>
+
+  <form #form="ngForm" (submit)="depositar(form)"
+        [ngClass]="{'ng-submitted': form.submitted}">
+    <div class="form-itens">
+      <div class="item">
+        <label>Conta</label>
+        <select name="conta" [(ngModel)]="numero"
+               required #modelNumero="ngModel">
+          <option value>Selecione</option>
+          <option [value]="conta.numero"
+                  *ngFor="let conta of contas">
+            {{conta.agencia}} {{conta.numero}}
+          </option>
+        </select>
+        <app-mensagens-erro [model]="modelNumero"></app-mensagens-erro>
+      </div>
+
+      <div class="item">
+        <label>Valor</label>
+        <input name="valor" [(ngModel)]="valor"
+               required min="0.01" #modelValor="ngModel" />
+        <app-mensagens-erro [model]="modelValor"></app-mensagens-erro>
+      </div>
+
+      <div class="actions">
+        <button>Depositar</button>
+      </div>
+    </div>
+  </form>
+
+</fieldset>

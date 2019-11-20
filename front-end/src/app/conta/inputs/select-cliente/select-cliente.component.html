@@ -1,0 +1,5 @@
+<select name="cpfCliente" [(ngModel)]="cpfCliente" >
+  <option value>Selecione</option>
+  <option [value]="cli.cpf"
+          *ngFor="let cli of clientes">{{cli.nome}}</option>
+</select>

@@ -1,0 +1,48 @@
+<fieldset>
+  <legend>Transferência</legend>
+
+  <form #form="ngForm" (submit)="transferir(form)"
+        [ngClass]="{'ng-submitted': form.submitted}">
+    <div class="form-itens">
+      <div class="item">
+        <label>Conta Débito</label>
+        <select name="conta" [(ngModel)]="transferencia.numeroContaDeDebito"
+                required #modelNumeroD="ngModel">
+          <option value>Selecione</option>
+          <option [value]="conta.numero"
+                  *ngFor="let conta of contas">
+            {{conta.agencia}} {{conta.numero}}
+          </option>
+        </select>
+        <app-mensagens-erro [model]="modelNumeroD"></app-mensagens-erro>
+      </div>
+
+      <div class="item">
+        <label>Conta Crédito</label>
+        <select name="conta" [(ngModel)]="transferencia.numeroContaDeCredito"
+                required #modelNumeroC="ngModel">
+          <option value>Selecione</option>
+          <ng-container *ngFor="let conta of contas">
+            <option [value]="conta.numero"
+                    *ngIf="conta.numero != transferencia.numeroContaDeDebito">
+              {{conta.agencia}} {{conta.numero}}
+            </option>
+          </ng-container>
+        </select>
+        <app-mensagens-erro [model]="modelNumeroC"></app-mensagens-erro>
+      </div>
+
+      <div class="item">
+        <label>Valor</label>
+        <input name="valor" [(ngModel)]="transferencia.valor"
+               required min="0.01" #modelValor="ngModel" />
+        <app-mensagens-erro [model]="modelValor"></app-mensagens-erro>
+      </div>
+
+      <div class="actions">
+        <button>Transferir</button>
+      </div>
+    </div>
+  </form>
+
+</fieldset>

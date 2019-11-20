@@ -1,0 +1,18 @@
+<div class="error" *ngIf="ngModel.errors">
+  <span *ngIf="ngModel.errors.required">Campo obrigatório!</span>
+  <span *ngIf="ngModel.errors.minlength">
+    O campo deve possuir ao menos {{ngModel.errors.minlength.requiredLength}} caracteres!
+  </span>
+  <span *ngIf="ngModel.errors.min">
+    O campo deve ser ao menos {{ngModel.errors.min.valor}}!
+  </span>
+  <span *ngIf="ngModel.errors.max">
+    O campo deve ser no máximo {{ngModel.errors.max.valor}}!
+  </span>
+  <span *ngIf="ngModel.errors.pattern">
+    O campo não respeita o formato {{ngModel.errors.pattern.requiredPattern}}!
+  </span>
+  <span *ngIf="ngModel.errors.cpf">
+    O CPF não é válido!
+  </span>
+</div>

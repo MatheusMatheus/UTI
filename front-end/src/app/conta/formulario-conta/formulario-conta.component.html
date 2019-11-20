@@ -1,0 +1,35 @@
+<fieldset>
+  <legend>Abertura de Conta</legend>
+
+  <form
+    [ngClass]="{'ng-submitted': form.submitted}"
+    (submit)="aplicarAlteracoes(form)" #form="ngForm">
+    <div class="form-itens">
+      <div class="item">
+        <label>Tipo:</label>
+        <app-select-tipo-conta
+          name="tipo" [(ngModel)]="conta.tipo"
+          #modelTipo="ngModel" required
+        ></app-select-tipo-conta>
+        <app-mensagens-erro [model]="modelTipo"></app-mensagens-erro>
+      </div>
+
+      <div class="item">
+        <label>Titular:</label>
+        <app-select-cliente
+          [clientes]="clientes"
+          name="titular" [(ngModel)]="conta.titular"
+          required #titularModel="ngModel" >
+        </app-select-cliente>
+        <app-mensagens-erro [model]="modelTipo"></app-mensagens-erro>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button>Salvar</button>
+      <button type="button" (click)="cancelar(form)">Cancelar</button>
+    </div>
+
+  </form>
+
+</fieldset>

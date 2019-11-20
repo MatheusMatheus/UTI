@@ -1,0 +1,46 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Novo Cliente</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form #form="ngForm" (submit)="aplicarAlteracoes(form)"
+          [ngClass]="{'ng-submitted': form.submitted}">
+      <div class="form-itens">
+        <mat-form-field class="item">
+            <input matInput placeholder="Nome" autocomplete="off"
+                   name="nome" [(ngModel)]="cliente.nome"
+                   required minlength="3" maxlength="150"
+                   #modelNome="ngModel"/>
+            <mat-hint>
+              <app-mensagens-erro [model]="modelNome"></app-mensagens-erro>
+            </mat-hint>
+        </mat-form-field>
+
+        <mat-form-field class="item">
+          <input matInput placeholder="CPF"
+                 name="cpf" [(ngModel)]="cliente.cpf"
+                 required minlength="11" maxlength="11"
+                 #modelCpf="ngModel" />
+          <mat-hint>
+            <app-mensagens-erro [model]="modelCpf"></app-mensagens-erro>
+          </mat-hint>
+        </mat-form-field>
+
+        <div class="item">
+          <label>Status</label>
+          <app-select-status-cliente
+            name="status" [(ngModel)]="cliente.status"
+            required #modelStatus="ngModel">
+          </app-select-status-cliente>
+          <app-mensagens-erro [model]="modelStatus"></app-mensagens-erro>
+        </div>
+
+        <div class="actions">
+          <button mat-raised-button color="primary">Salvar</button>
+          <button mat-button type="button" (click)="cancelar(form)">Cancelar</button>
+        </div>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

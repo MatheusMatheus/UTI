@@ -1,0 +1,33 @@
+<app-listagem-contas @spin
+  [contas]="contas"
+  (contaSelecionada)="encerramento = $event; abertura = undefined"
+></app-listagem-contas>
+
+<!-- Abertura de Conta -->
+<ng-container *ngIf="!encerramento">
+  <ng-container *ngIf="abertura">
+    <app-formulario-conta
+      [conta]="abertura"
+      [clientes]="clientes"
+      (contaChange)="abre($event)"
+    ></app-formulario-conta>
+  </ng-container>
+
+  <hr/>
+
+  <button *ngIf="!abertura" (click)="novaConta()">Abrir Conta</button>
+</ng-container>
+
+<!-- Encerramento de Conta -->
+<ng-container *ngIf="encerramento">
+  <ng-container>
+    <app-dados-conta
+      [conta]="encerramento"
+    ></app-dados-conta>
+  </ng-container>
+
+  <hr/>
+
+  <button (click)="encerrar()">Encerrar</button>
+  <button (click)="encerramento = undefined">Cancelar</button>
+</ng-container>

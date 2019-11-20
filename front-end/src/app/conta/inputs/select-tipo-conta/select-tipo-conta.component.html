@@ -1,0 +1,6 @@
+<button type="button"
+        [disabled]="tipo == 'CORRENTE'"
+        (click)="seleciona('CORRENTE')">Conta Corrente</button>
+<button type="button"
+        [disabled]="tipo == 'POUPANCA'"
+        (click)="seleciona('POUPANCA')">Conta Poupança</button>

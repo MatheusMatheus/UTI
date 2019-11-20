@@ -1,0 +1,6 @@
+<label>Agência/Número:</label> {{ conta.agencia }} {{ conta.numero }}<br/>
+<label>Tipo:</label> {{conta.tipo | tipoConta}}<br/>
+<label>Titular:</label> {{conta.titular.nome }}<br/>
+<label>Saldo:</label> {{conta.saldo | currency:'R$' }}<br/>
+<label>Estado:</label> {{conta.estado | estadoConta}}<br/>
+<label *ngIf="conta.tipo === 'POUPANCA'">Dia de Aniversário:</label> {{conta.diaDeAniversario}}<br/>

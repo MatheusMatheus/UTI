@@ -1,0 +1,21 @@
+table {
+  width: 100%;
+}
+
+table tr th {
+  background-color: lightgray;
+  font-weight: bold;
+  text-align: center;
+}
+
+table tr td, th {
+  padding: 5px;
+}
+
+table tr:nth-child(odd) td {
+  background-color: #eee;
+}
+
+table tr:hover td {
+  background-color: #ddf;
+}

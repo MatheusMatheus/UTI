@@ -1,0 +1,9 @@
+<div class="menu">
+  <a routerLink="/terminal/cadastro"
+  routerLinkActive
+  #transfActive="routerLinkActive"
+  [ngClass]="{'active': transfActive.isActive}"
+>Terminal</a>
+</div>
+
+<router-outlet></router-outlet>
