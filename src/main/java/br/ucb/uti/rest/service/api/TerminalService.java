@@ -20,7 +20,7 @@ public interface TerminalService{
     Response getTeminal(@PathParam("id") Integer id);
 
     @POST
-    @Path("novo")
+    @Path("cadastrar")
     Response cadastrar(Terminal terminal);
 
 }

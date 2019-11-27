@@ -4,24 +4,15 @@ export class Terminal {
   
     constructor(
       public nome: string,
-      public id: string,
-      public enderecoMac: string,
-      public dataCadastro: Date
+      public mac: string,
+      public statusTerminal: StatusTerminal,
+      public dataCadastro: string
     ) {
     }
   
-    get status(): string {
-      return this.statusInterno;
-    }
-  
-    set status(status: string) {
-  
-      if (status === 'I' ||
-        status === 'A') {
-        this.statusInterno = status;
-      }
-  
-    }
-  
+  }
+
+  export enum StatusTerminal {
+    ATIVO, INATIVO
   }
   

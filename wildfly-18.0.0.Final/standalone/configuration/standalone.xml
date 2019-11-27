@@ -527,12 +527,4 @@
             <remote-destination host="localhost" port="25"/>
         </outbound-socket-binding>
     </socket-binding-group>
-    <deployments>
-        <deployment name="uti-1.0-SNAPSHOT" runtime-name="uti-1.0-SNAPSHOT.war">
-            <fs-exploded path="/home/matheus/work/programacao/Java/uti/target/uti-1.0-SNAPSHOT"/>
-        </deployment>
-        <deployment name="uti" runtime-name="uti.war">
-            <fs-exploded path="/home/matheus/work/programacao/Java/uti/target/uti"/>
-        </deployment>
-    </deployments>
 </server>

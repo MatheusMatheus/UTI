@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { MatButtonModule, MatSlideToggleModule, MatCardModule, MatInputModule, MatFormFieldModule, MatSelectModule, MAT_LABEL_GLOBAL_OPTIONS } from '@angular/material';
+import { NegocioModule } from '../negocio/negocio.module';
 
 @NgModule({
   declarations: [CadastroComponent],
@@ -19,6 +20,7 @@ import { MatButtonModule, MatSlideToggleModule, MatCardModule, MatInputModule, M
     MatInputModule,
     MatFormFieldModule,
     MatSelectModule,
+    NegocioModule,
     RouterModule.forChild([
       {
         path: 'cadastro',

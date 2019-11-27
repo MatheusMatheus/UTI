@@ -4,7 +4,7 @@
     </mat-card-header>
   
     <mat-card-content>
-      <form #form="ngForm" (submit)="aplicarAlteracoes(form)"
+      <form #form="ngForm" (submit)="cadastrar(form)"
             [ngClass]="{'ng-submitted': form.submitted}">
         <div class="form-itens">
           <mat-form-field class="item">
@@ -19,19 +19,10 @@
           </mat-form-field>
   
           <mat-form-field class="item">
-                <label>Identificador</label>
-                <input matInput name="identificador" 
-                       [(ngModel)]="terminal.identificador"
-                       required />
-            <mat-hint>
-            </mat-hint>
-          </mat-form-field>
-
-          <mat-form-field class="item">
                 <label>Status</label>
-                <mat-select [(ngModel)]="terminal.status" name = "status">
-                        <mat-option [value]="I">I</mat-option>
-                        <mat-option [value]="I">A</mat-option>
+                <mat-select [(ngModel)]="terminal.statusTerminal" name = "statusTerminal">
+                        <mat-option value="ATIVO">Ativo</mat-option>
+                        <mat-option value="INATIVO">Inativo</mat-option>
                 </mat-select>
           </mat-form-field>
 
