@@ -12,6 +12,10 @@ import {RouterModule} from '@angular/router';
         loadChildren: './terminal/terminal.module#TerminalModule'
       },
       {
+        path: 'monitoramento',
+        loadChildren: './monitoramento/monitoramento.module#MonitoramentoModule'
+      },
+      {
         path: 'crud',
         loadChildren: './crud/crud.module#CrudModule'
       },
