@@ -1,0 +1,63 @@
+.temperatura {
+    margin: 20px;
+    right: 20px;
+    top: 70%;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    width: 30%;
+    max-height: 40%;
+    position: absolute;
+    display: block;
+}
+
+.c {
+    display: inline-block;
+    margin: 5px;
+    top: 15px;
+    margin-left: 45px;
+}
+
+.temp {
+    position: relative;
+    float: right;
+    width: 60%;
+    height: 90%;
+}
+
+.numTemp {
+    display: inline-block;
+    font-size: 6em;
+    font-weight: 700;
+    position: absolute;
+    color: #00ff00;
+    right: 5px;
+    margin-bottom: 10px;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.temps {
+    margin: 5px;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    display: block;
+    text-align: center;
+    align-content: center;
+}
+
+.temp1, .temp2 {
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.temp2 {
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    top: 20px;
+}

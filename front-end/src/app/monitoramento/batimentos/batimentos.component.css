@@ -1,0 +1,8 @@
+#mycanvas {
+    border: 1px solid white;
+    position: absolute;
+    float: left;
+    left: 50px;
+    margin-top: 210px;
+    min-width: 60%;
+}

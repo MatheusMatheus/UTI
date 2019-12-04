@@ -1,6 +1,7 @@
 .pressao {
-    float: right;
-    margin: 50px;
+    margin: 20px;
+    right: 20px;
+    top: 30%;
     background-color: transparent;
     color: white;
     border: 1px solid white;
@@ -8,17 +9,17 @@
     padding: 10px;
     width: 30%;
     height: 30%;
-    position: relative;
+    position: absolute;
 }
 
 .mmHG {
     display: inline-block;
     margin: 5px;
-    border: 1px solid red;
 }
 
 .mmHG, .mini-pressao, .horario, .info-aleatoria {
     top: 15px;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 .numPressao{
@@ -26,7 +27,6 @@
     float: right;
     width: 60%;
     height: 90%;
-    border: 1px solid red;
 }
 
 .sistolica, .diastolica {
@@ -37,6 +37,7 @@
     position: absolute;
     color: #990073;
     padding: 10px;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 .diastolica {
@@ -48,20 +49,22 @@
     height: 50px;
     width: 50px;
     position: relative;
-    border: 1px solid red;
     display: block;
     text-align: center;
     align-content: center;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 .mini-sistolica, .mini-diastolica, .adt, .horas, .mini-info-aleatoria1, .mini-info-aleatoria2 {
     position: absolute;
     right: 0;
     font-size: 20px;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 .mini-diastolica, .horas, .mini-info-aleatoria2 {
     top: 20px;
 }
+
 
 
