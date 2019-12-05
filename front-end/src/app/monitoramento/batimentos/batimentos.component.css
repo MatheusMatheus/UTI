@@ -3,6 +3,7 @@
     position: absolute;
     float: left;
     left: 50px;
-    margin-top: 210px;
+    margin-top: 200px;
     min-width: 60%;
+    min-height: 60%;
 }

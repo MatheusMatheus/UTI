@@ -13,11 +13,12 @@ public interface TerminalService{
 
 
     @GET
+    @Path("todos")
     Response getTerminais();
 
     @GET
     @Path("{id}")
-    Response getTeminal(@PathParam("id") Integer id);
+    Response getTerminal(@PathParam("id") Integer id);
 
     @POST
     @Path("cadastrar")

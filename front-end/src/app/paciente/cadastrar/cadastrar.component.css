@@ -1,0 +1,62 @@
+label {
+  display: block;
+  margin-bottom: 3px;
+  font-weight: bold;
+}
+
+.form-itens {
+  clear: both;
+  float: none;
+  margin: -5px;
+}
+
+.form-itens .item {
+  width: calc(100% - 10px);
+  padding: 10px;
+  display: block;
+}
+
+.item-lado {
+  padding: 10px;
+}
+
+.form-itens .item input,
+.form-itens .item select {
+  width: 100%;
+}
+
+.form-itens .item.three input,
+.form-itens .item.three select {
+  width: calc(30% - 10px);
+  margin: 5px;
+}
+
+.actions {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid grey;
+}
+
+.actions button {
+  margin-right: 10px;
+}
+
+.container-cadastro {
+  height: 100%;
+  border: 1px solid red;
+  position: relative;
+}
+
+.esquerdo {
+  float: left;
+  margin-left: 50px;
+  width: 400px;
+  border: 1px solid blue;
+}
+
+.direito {
+  float: right;
+  margin-right: 50px;
+  width: 600px;
+  border: 1px solid blue;
+}

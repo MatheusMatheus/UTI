@@ -5,6 +5,7 @@ import {ContaService} from './service/conta.service';
 import {TransacaoService} from './service/transacao.service';
 import {HttpClientModule} from '@angular/common/http';
 import { TerminalService } from './service/terminal.service';
+import { PacienteService } from './service/paciente.service';
 
 @NgModule({
   declarations: [],
@@ -16,7 +17,8 @@ import { TerminalService } from './service/terminal.service';
     ClienteService,
     ContaService,
     TransacaoService,
-    TerminalService
+    TerminalService,
+    PacienteService
   ]
 })
 export class NegocioModule { }

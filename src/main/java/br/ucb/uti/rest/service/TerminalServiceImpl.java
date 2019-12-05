@@ -26,7 +26,7 @@ public class TerminalServiceImpl implements TerminalService {
     }
 
     @Override
-    public Response getTeminal(Integer id) {
+    public Response getTerminal(Integer id) {
         try {
             return Response.ok().entity(dao.findById(id)).build();
 

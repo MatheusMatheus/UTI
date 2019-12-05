@@ -1,6 +1,7 @@
 export class Terminal {
 
     private statusInterno: string;
+    identificador: number;
   
     constructor(
       public nome: string,

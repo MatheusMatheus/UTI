@@ -21,4 +21,13 @@ h3{
 .container {
     position: relative;
     height: 100%;
+    border: 1px solid red;
+}
+
+.footer {
+    color: white;
+    font-size: 1.5em;
+    bottom: 20px;
+    right: 50px;
+    position: absolute;
 }

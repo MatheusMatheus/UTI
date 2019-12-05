@@ -1,8 +1,8 @@
-2019-11-29 22:57:10,067 INFO  [org.jboss.modules] (main) JBoss Modules version 1.9.1.Final
-2019-11-29 22:57:10,479 INFO  [org.jboss.msc] (main) JBoss MSC version 1.4.11.Final
-2019-11-29 22:57:10,490 INFO  [org.jboss.threads] (main) JBoss Threads version 2.3.3.Final
-2019-11-29 22:57:10,602 INFO  [org.jboss.as] (MSC service thread 1-1) WFLYSRV0049: WildFly Full 18.0.0.Final (WildFly Core 10.0.0.Final) starting
-2019-11-29 22:57:10,606 DEBUG [org.jboss.as.config] (MSC service thread 1-1) Configured system properties:
+2019-12-05 01:23:31,466 INFO  [org.jboss.modules] (main) JBoss Modules version 1.9.1.Final
+2019-12-05 01:23:31,985 INFO  [org.jboss.msc] (main) JBoss MSC version 1.4.11.Final
+2019-12-05 01:23:31,997 INFO  [org.jboss.threads] (main) JBoss Threads version 2.3.3.Final
+2019-12-05 01:23:32,144 INFO  [org.jboss.as] (MSC service thread 1-2) WFLYSRV0049: WildFly Full 18.0.0.Final (WildFly Core 10.0.0.Final) starting
+2019-12-05 01:23:32,151 DEBUG [org.jboss.as.config] (MSC service thread 1-2) Configured system properties:
 	awt.toolkit = sun.awt.windows.WToolkit
 	file.encoding = Cp1252
 	file.encoding.pkg = sun.io
@@ -12,11 +12,11 @@
 	java.awt.printerjob = sun.awt.windows.WPrinterJob
 	java.class.path = D:\Documentos\UTI\wildfly-18.0.0.Final\jboss-modules.jar
 	java.class.version = 52.0
-	java.endorsed.dirs = C:\Program Files\Java\jre1.8.0_231\lib\endorsed
-	java.ext.dirs = C:\Program Files\Java\jre1.8.0_231\lib\ext;C:\Windows\Sun\Java\lib\ext
-	java.home = C:\Program Files\Java\jre1.8.0_231
+	java.endorsed.dirs = C:\Program Files\Java\jdk1.8.0_231\jre\lib\endorsed
+	java.ext.dirs = C:\Program Files\Java\jdk1.8.0_231\jre\lib\ext;C:\Windows\Sun\Java\lib\ext
+	java.home = C:\Program Files\Java\jdk1.8.0_231\jre
 	java.io.tmpdir = C:\Users\usuario\AppData\Local\Temp\
-	java.library.path = C:\Program Files\Java\jre1.8.0_231\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;native;C:/Program Files/Java/jre1.8.0_231/bin/server;C:/Program Files/Java/jre1.8.0_231/bin;C:/Program Files/Java/jre1.8.0_231/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\usuario\AppData\Local\Microsoft\WindowsApps;;C:\Users\usuario\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\usuario\AppData\Roaming\npm;C:\Program Files\eclipse;;.
+	java.library.path = C:\Program Files\Java\jdk1.8.0_231\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_231\jre\bin;native;C:/Program Files/Java/jre1.8.0_231/bin/server;C:/Program Files/Java/jre1.8.0_231/bin;C:/Program Files/Java/jre1.8.0_231/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\usuario\AppData\Local\Microsoft\WindowsApps;;C:\Users\usuario\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\usuario\AppData\Roaming\npm;C:\Program Files\eclipse;;.
 	java.net.preferIPv4Stack = true
 	java.runtime.name = Java(TM) SE Runtime Environment
 	java.runtime.version = 1.8.0_231-b11
@@ -65,8 +65,8 @@
 	path.separator = ;
 	program.name = JBossTools: WildFly 18 at localhost
 	sun.arch.data.model = 64
-	sun.boot.class.path = C:\Program Files\Java\jre1.8.0_231\lib\resources.jar;C:\Program Files\Java\jre1.8.0_231\lib\rt.jar;C:\Program Files\Java\jre1.8.0_231\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_231\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_231\lib\jce.jar;C:\Program Files\Java\jre1.8.0_231\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_231\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_231\classes
-	sun.boot.library.path = C:\Program Files\Java\jre1.8.0_231\bin
+	sun.boot.class.path = C:\Program Files\Java\jdk1.8.0_231\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_231\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_231\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_231\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_231\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_231\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_231\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_231\jre\classes
+	sun.boot.library.path = C:\Program Files\Java\jdk1.8.0_231\jre\bin
 	sun.cpu.endian = little
 	sun.cpu.isalist = amd64
 	sun.desktop = windows
@@ -86,56 +86,52 @@
 	user.script = 
 	user.timezone = America/Sao_Paulo
 	user.variant = 
-2019-11-29 22:57:10,608 DEBUG [org.jboss.as.config] (MSC service thread 1-1) VM Arguments: -Dprogram.name=JBossTools: WildFly 18 at localhost -Xms64m -Xmx512m -Dorg.jboss.resolver.warning=true -Djava.net.preferIPv4Stack=true -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Dorg.jboss.boot.log.file=D:\Documentos\UTI\wildfly-18.0.0.Final\standalone\log\boot.log -Dlogging.configuration=file:D:\Documentos\UTI\wildfly-18.0.0.Final\standalone\configuration\logging.properties -Djboss.home.dir=D:\Documentos\UTI\wildfly-18.0.0.Final -Dorg.jboss.logmanager.nocolor=true -Djboss.bind.address.management=localhost -Dfile.encoding=Cp1252 
-2019-11-29 22:57:11,467 INFO  [org.wildfly.security] (ServerService Thread Pool -- 28) ELY00001: WildFly Elytron version 1.10.3.Final
-2019-11-29 22:57:12,054 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
-2019-11-29 22:57:12,083 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 10) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
-2019-11-29 22:57:12,120 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) WFLYDS0004: Found uti.war in deployment directory. To trigger deployment create a file called uti.war.dodeploy
-2019-11-29 22:57:12,195 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
-2019-11-29 22:57:12,219 INFO  [org.xnio] (MSC service thread 1-6) XNIO version 3.7.3.Final
-2019-11-29 22:57:12,229 INFO  [org.xnio.nio] (MSC service thread 1-6) XNIO NIO Implementation Version 3.7.3.Final
-2019-11-29 22:57:12,277 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 72) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
-2019-11-29 22:57:12,309 INFO  [org.wildfly.extension.microprofile.config.smallrye._private] (ServerService Thread Pool -- 60) WFLYCONF0001: Activating WildFly MicroProfile Config Subsystem
-2019-11-29 22:57:12,370 INFO  [org.wildfly.extension.microprofile.opentracing] (ServerService Thread Pool -- 63) WFLYTRACEXT0001: Activating MicroProfile OpenTracing Subsystem
-2019-11-29 22:57:12,431 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 64) WFLYNAM0001: Activating Naming Subsystem
-2019-11-29 22:57:12,443 INFO  [org.jboss.as.jaxrs] (ServerService Thread Pool -- 53) WFLYRS0016: RESTEasy version 3.9.0.Final
-2019-11-29 22:57:12,454 INFO  [org.wildfly.extension.microprofile.health.smallrye] (ServerService Thread Pool -- 61) WFLYHEALTH0001: Activating Eclipse MicroProfile Health Subsystem
-2019-11-29 22:57:12,457 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 51) WFLYCLINF0001: Activating Infinispan subsystem.
-2019-11-29 22:57:12,487 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 70) WFLYSEC0002: Activating Security Subsystem
-2019-11-29 22:57:12,519 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 74) WFLYWS0002: Activating WebServices Extension
-2019-11-29 22:57:12,541 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 58) WFLYJSF0007: Activated the following JSF Implementations: [main]
-2019-11-29 22:57:12,552 INFO  [org.jboss.as.security] (MSC service thread 1-8) WFLYSEC0001: Current PicketBox version=5.0.3.Final
-2019-11-29 22:57:12,558 INFO  [org.wildfly.extension.microprofile.metrics.smallrye] (ServerService Thread Pool -- 62) WFLYMETRICS0001: Activating Eclipse MicroProfile Metrics Subsystem
-2019-11-29 22:57:12,567 INFO  [org.jboss.as.connector] (MSC service thread 1-5) WFLYJCA0009: Starting JCA Subsystem (WildFly/IronJacamar 1.4.17.Final)
-2019-11-29 22:57:12,594 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0003: Undertow 2.0.26.Final starting
-2019-11-29 22:57:12,609 INFO  [org.jboss.as.naming] (MSC service thread 1-5) WFLYNAM0003: Starting Naming Service
-2019-11-29 22:57:12,613 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 43) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.4)
-2019-11-29 22:57:12,619 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-1) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
-2019-11-29 22:57:12,641 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-7) WFLYJCA0018: Started Driver service with driver-name = h2
-2019-11-29 22:57:12,686 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 52) WFLYIO001: Worker 'default' has auto-configured to 16 core threads with 128 task threads based on your 8 available processors
-2019-11-29 22:57:12,837 INFO  [org.jboss.as.ejb3] (MSC service thread 1-8) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 128 (per class), which is derived from thread worker pool sizing.
-2019-11-29 22:57:12,838 INFO  [org.jboss.as.ejb3] (MSC service thread 1-3) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 32 (per class), which is derived from the number of CPUs on this host.
-2019-11-29 22:57:12,863 INFO  [org.jboss.remoting] (MSC service thread 1-7) JBoss Remoting version 5.0.15.Final
-2019-11-29 22:57:12,874 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 73) WFLYUT0014: Creating file handler for path 'D:\Documentos\UTI\wildfly-18.0.0.Final/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
-2019-11-29 22:57:12,901 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0012: Started server default-server.
-2019-11-29 22:57:12,905 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0018: Host default-host starting
-2019-11-29 22:57:13,058 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0006: Undertow HTTP listener default listening on 127.0.0.1:8080
-2019-11-29 22:57:13,304 INFO  [org.jboss.as.ejb3] (MSC service thread 1-6) WFLYEJB0493: EJB subsystem suspension complete
-2019-11-29 22:57:13,374 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
-2019-11-29 22:57:13,495 INFO  [org.jboss.as.patching] (MSC service thread 1-5) WFLYPAT0050: WildFly Full cumulative patch ID is: base, one-off patches include: none
-2019-11-29 22:57:13,526 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-6) WFLYDS0013: Started FileSystemDeploymentService for directory D:\Documentos\UTI\wildfly-18.0.0.Final\standalone\deployments
-2019-11-29 22:57:13,535 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0027: Starting deployment of "uti.war" (runtime-name: "uti.war")
-2019-11-29 22:57:13,720 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0006: Undertow HTTPS listener https listening on 127.0.0.1:8443
-2019-11-29 22:57:13,883 INFO  [org.jboss.ws.common.management] (MSC service thread 1-2) JBWS022052: Starting JBossWS 5.3.0.Final (Apache CXF 3.3.3) 
-2019-11-29 22:57:15,760 INFO  [org.jboss.as.jpa] (MSC service thread 1-7) WFLYJPA0002: Read persistence.xml for UTI-PU
-2019-11-29 22:57:16,002 INFO  [org.jboss.weld.deployer] (MSC service thread 1-6) WFLYWELD0003: Processing weld deployment uti.war
-2019-11-29 22:57:16,173 INFO  [org.infinispan.factories.GlobalComponentRegistry] (MSC service thread 1-4) ISPN000128: Infinispan version: Infinispan 'Infinity Minus ONE +2' 9.4.16.Final
-2019-11-29 22:57:16,211 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-6) HV000001: Hibernate Validator 6.0.17.Final
-2019-11-29 22:57:16,328 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 76) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'uti.war#UTI-PU'
-2019-11-29 22:57:16,347 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 76) HHH000204: Processing PersistenceUnitInfo [
-	name: UTI-PU
-	...]
-2019-11-29 22:57:16,384 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-6) WFLYEJB0473: JNDI bindings for session bean named 'PacienteServiceImpl' in deployment unit 'deployment "uti.war"' are as follows:
+2019-12-05 01:23:32,157 DEBUG [org.jboss.as.config] (MSC service thread 1-2) VM Arguments: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:64549 -Dprogram.name=JBossTools: WildFly 18 at localhost -Xms64m -Xmx512m -Dorg.jboss.resolver.warning=true -Djava.net.preferIPv4Stack=true -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Dorg.jboss.boot.log.file=D:\Documentos\UTI\wildfly-18.0.0.Final\standalone\log\boot.log -Dlogging.configuration=file:D:\Documentos\UTI\wildfly-18.0.0.Final\standalone\configuration\logging.properties -Djboss.home.dir=D:\Documentos\UTI\wildfly-18.0.0.Final -Dorg.jboss.logmanager.nocolor=true -Djboss.bind.address.management=localhost -Dfile.encoding=Cp1252 
+2019-12-05 01:23:33,153 INFO  [org.wildfly.security] (ServerService Thread Pool -- 28) ELY00001: WildFly Elytron version 1.10.3.Final
+2019-12-05 01:23:34,073 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2019-12-05 01:23:34,100 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 30) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2019-12-05 01:23:34,165 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) WFLYDS0004: Found uti.war in deployment directory. To trigger deployment create a file called uti.war.dodeploy
+2019-12-05 01:23:34,218 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2019-12-05 01:23:34,264 INFO  [org.xnio] (MSC service thread 1-3) XNIO version 3.7.3.Final
+2019-12-05 01:23:34,280 INFO  [org.xnio.nio] (MSC service thread 1-3) XNIO NIO Implementation Version 3.7.3.Final
+2019-12-05 01:23:34,363 INFO  [org.wildfly.extension.microprofile.health.smallrye] (ServerService Thread Pool -- 61) WFLYHEALTH0001: Activating Eclipse MicroProfile Health Subsystem
+2019-12-05 01:23:34,378 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 70) WFLYSEC0002: Activating Security Subsystem
+2019-12-05 01:23:34,386 INFO  [org.jboss.as.security] (MSC service thread 1-8) WFLYSEC0001: Current PicketBox version=5.0.3.Final
+2019-12-05 01:23:34,403 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 58) WFLYJSF0007: Activated the following JSF Implementations: [main]
+2019-12-05 01:23:34,413 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 51) WFLYCLINF0001: Activating Infinispan subsystem.
+2019-12-05 01:23:34,416 INFO  [org.jboss.as.connector] (MSC service thread 1-5) WFLYJCA0009: Starting JCA Subsystem (WildFly/IronJacamar 1.4.17.Final)
+2019-12-05 01:23:34,429 INFO  [org.jboss.as.jaxrs] (ServerService Thread Pool -- 53) WFLYRS0016: RESTEasy version 3.9.0.Final
+2019-12-05 01:23:34,431 INFO  [org.wildfly.extension.microprofile.config.smallrye._private] (ServerService Thread Pool -- 60) WFLYCONF0001: Activating WildFly MicroProfile Config Subsystem
+2019-12-05 01:23:34,442 INFO  [org.wildfly.extension.microprofile.opentracing] (ServerService Thread Pool -- 63) WFLYTRACEXT0001: Activating MicroProfile OpenTracing Subsystem
+2019-12-05 01:23:34,443 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 74) WFLYWS0002: Activating WebServices Extension
+2019-12-05 01:23:34,497 INFO  [org.wildfly.extension.microprofile.metrics.smallrye] (ServerService Thread Pool -- 62) WFLYMETRICS0001: Activating Eclipse MicroProfile Metrics Subsystem
+2019-12-05 01:23:34,505 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 72) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
+2019-12-05 01:23:34,531 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0003: Undertow 2.0.26.Final starting
+2019-12-05 01:23:34,531 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 43) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.4)
+2019-12-05 01:23:34,557 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-8) WFLYJCA0018: Started Driver service with driver-name = h2
+2019-12-05 01:23:34,562 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 64) WFLYNAM0001: Activating Naming Subsystem
+2019-12-05 01:23:34,676 INFO  [org.jboss.as.naming] (MSC service thread 1-4) WFLYNAM0003: Starting Naming Service
+2019-12-05 01:23:34,698 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-8) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+2019-12-05 01:23:34,821 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 73) WFLYUT0014: Creating file handler for path 'D:\Documentos\UTI\wildfly-18.0.0.Final/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
+2019-12-05 01:23:34,882 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 52) WFLYIO001: Worker 'default' has auto-configured to 16 core threads with 128 task threads based on your 8 available processors
+2019-12-05 01:23:34,918 INFO  [org.jboss.as.ejb3] (MSC service thread 1-1) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 128 (per class), which is derived from thread worker pool sizing.
+2019-12-05 01:23:34,919 INFO  [org.jboss.as.ejb3] (MSC service thread 1-6) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 32 (per class), which is derived from the number of CPUs on this host.
+2019-12-05 01:23:35,017 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0012: Started server default-server.
+2019-12-05 01:23:35,019 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0018: Host default-host starting
+2019-12-05 01:23:35,032 INFO  [org.jboss.remoting] (MSC service thread 1-3) JBoss Remoting version 5.0.15.Final
+2019-12-05 01:23:35,178 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0006: Undertow HTTP listener default listening on 127.0.0.1:8080
+2019-12-05 01:23:35,421 INFO  [org.jboss.as.ejb3] (MSC service thread 1-2) WFLYEJB0493: EJB subsystem suspension complete
+2019-12-05 01:23:35,498 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-3) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+2019-12-05 01:23:35,641 INFO  [org.jboss.as.patching] (MSC service thread 1-1) WFLYPAT0050: WildFly Full cumulative patch ID is: base, one-off patches include: none
+2019-12-05 01:23:35,672 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-1) WFLYDS0013: Started FileSystemDeploymentService for directory D:\Documentos\UTI\wildfly-18.0.0.Final\standalone\deployments
+2019-12-05 01:23:35,684 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) WFLYSRV0027: Starting deployment of "uti.war" (runtime-name: "uti.war")
+2019-12-05 01:23:35,969 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0006: Undertow HTTPS listener https listening on 127.0.0.1:8443
+2019-12-05 01:23:36,271 INFO  [org.jboss.ws.common.management] (MSC service thread 1-5) JBWS022052: Starting JBossWS 5.3.0.Final (Apache CXF 3.3.3) 
+2019-12-05 01:23:39,403 INFO  [org.jboss.as.jpa] (MSC service thread 1-1) WFLYJPA0002: Read persistence.xml for UTI-PU
+2019-12-05 01:23:39,960 INFO  [org.jboss.weld.deployer] (MSC service thread 1-6) WFLYWELD0003: Processing weld deployment uti.war
+2019-12-05 01:23:40,270 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-6) HV000001: Hibernate Validator 6.0.17.Final
+2019-12-05 01:23:40,379 INFO  [org.infinispan.factories.GlobalComponentRegistry] (MSC service thread 1-4) ISPN000128: Infinispan version: Infinispan 'Infinity Minus ONE +2' 9.4.16.Final
+2019-12-05 01:23:40,522 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-6) WFLYEJB0473: JNDI bindings for session bean named 'PacienteServiceImpl' in deployment unit 'deployment "uti.war"' are as follows:
 
 	java:global/uti/PacienteServiceImpl!br.ucb.uti.rest.service.api.PacienteService
 	java:app/uti/PacienteServiceImpl!br.ucb.uti.rest.service.api.PacienteService
@@ -145,7 +141,7 @@
 	java:app/uti/PacienteServiceImpl
 	java:module/PacienteServiceImpl
 
-2019-11-29 22:57:16,384 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-6) WFLYEJB0473: JNDI bindings for session bean named 'TerminalServiceImpl' in deployment unit 'deployment "uti.war"' are as follows:
+2019-12-05 01:23:40,523 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-6) WFLYEJB0473: JNDI bindings for session bean named 'TerminalServiceImpl' in deployment unit 'deployment "uti.war"' are as follows:
 
 	java:global/uti/TerminalServiceImpl!br.ucb.uti.rest.service.api.TerminalService
 	java:app/uti/TerminalServiceImpl!br.ucb.uti.rest.service.api.TerminalService
@@ -155,171 +151,160 @@
 	java:app/uti/TerminalServiceImpl
 	java:module/TerminalServiceImpl
 
-2019-11-29 22:57:16,424 INFO  [org.hibernate.Version] (ServerService Thread Pool -- 76) HHH000412: Hibernate Core {5.3.12.Final}
-2019-11-29 22:57:16,427 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 76) HHH000206: hibernate.properties not found
-2019-11-29 22:57:16,623 INFO  [org.hibernate.annotations.common.Version] (ServerService Thread Pool -- 76) HCANN000001: Hibernate Commons Annotations {5.0.5.Final}
-2019-11-29 22:57:16,694 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.4)
-2019-11-29 22:57:16,694 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 77) WFLYCLINF0002: Started client-mappings cache from ejb container
-2019-11-29 22:57:16,758 INFO  [org.jboss.weld.Version] (MSC service thread 1-2) WELD-000900: 3.1.2 (Final)
-2019-11-29 22:57:16,846 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) WFLYJCA0018: Started Driver service with driver-name = uti.war_org.h2.Driver_1_4
-2019-11-29 22:57:17,023 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 76) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'uti.war#UTI-PU'
-2019-11-29 22:57:17,213 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 76) HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2019-11-29 22:57:17,281 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 76) Envers integration enabled? : true
-2019-11-29 22:57:18,188 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
-2019-11-29 22:57:18,189 INFO  [stdout] (ServerService Thread Pool -- 76)     
-2019-11-29 22:57:18,189 INFO  [stdout] (ServerService Thread Pool -- 76)     create table EstadoPaciente (
-2019-11-29 22:57:18,189 INFO  [stdout] (ServerService Thread Pool -- 76)        identificador integer not null,
-2019-11-29 22:57:18,189 INFO  [stdout] (ServerService Thread Pool -- 76)         diastolicaMaxima double,
-2019-11-29 22:57:18,189 INFO  [stdout] (ServerService Thread Pool -- 76)         sistolicaMaxima double,
-2019-11-29 22:57:18,189 INFO  [stdout] (ServerService Thread Pool -- 76)         diastolicaMinima double,
-2019-11-29 22:57:18,189 INFO  [stdout] (ServerService Thread Pool -- 76)         sistolicaMinima double,
-2019-11-29 22:57:18,189 INFO  [stdout] (ServerService Thread Pool -- 76)         temperaturaAtual double not null,
-2019-11-29 22:57:18,189 INFO  [stdout] (ServerService Thread Pool -- 76)         temperaturaMaxima double not null,
-2019-11-29 22:57:18,189 INFO  [stdout] (ServerService Thread Pool -- 76)         temperaturaMinima double not null,
-2019-11-29 22:57:18,189 INFO  [stdout] (ServerService Thread Pool -- 76)         primary key (identificador)
-2019-11-29 22:57:18,190 INFO  [stdout] (ServerService Thread Pool -- 76)     )
-2019-11-29 22:57:18,193 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
-2019-11-29 22:57:18,193 INFO  [stdout] (ServerService Thread Pool -- 76)     
-2019-11-29 22:57:18,193 INFO  [stdout] (ServerService Thread Pool -- 76)     create table Login (
-2019-11-29 22:57:18,194 INFO  [stdout] (ServerService Thread Pool -- 76)        usuario varchar(255) not null,
-2019-11-29 22:57:18,194 INFO  [stdout] (ServerService Thread Pool -- 76)         senha varchar(255) not null,
-2019-11-29 22:57:18,194 INFO  [stdout] (ServerService Thread Pool -- 76)         primary key (usuario)
-2019-11-29 22:57:18,194 INFO  [stdout] (ServerService Thread Pool -- 76)     )
-2019-11-29 22:57:18,198 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
-2019-11-29 22:57:18,198 INFO  [stdout] (ServerService Thread Pool -- 76)     
-2019-11-29 22:57:18,198 INFO  [stdout] (ServerService Thread Pool -- 76)     create table Monitoramento (
-2019-11-29 22:57:18,198 INFO  [stdout] (ServerService Thread Pool -- 76)        id integer not null,
-2019-11-29 22:57:18,198 INFO  [stdout] (ServerService Thread Pool -- 76)         momentoConsulta timestamp,
-2019-11-29 22:57:18,198 INFO  [stdout] (ServerService Thread Pool -- 76)         diastolicaConsultada double,
-2019-11-29 22:57:18,198 INFO  [stdout] (ServerService Thread Pool -- 76)         sistolicaConsultada double,
-2019-11-29 22:57:18,199 INFO  [stdout] (ServerService Thread Pool -- 76)         temperaturaConsultada double not null,
-2019-11-29 22:57:18,199 INFO  [stdout] (ServerService Thread Pool -- 76)         paciente_cpf varchar(11),
-2019-11-29 22:57:18,199 INFO  [stdout] (ServerService Thread Pool -- 76)         terminal_identificador integer,
-2019-11-29 22:57:18,199 INFO  [stdout] (ServerService Thread Pool -- 76)         primary key (id)
-2019-11-29 22:57:18,199 INFO  [stdout] (ServerService Thread Pool -- 76)     )
-2019-11-29 22:57:18,201 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
-2019-11-29 22:57:18,201 INFO  [stdout] (ServerService Thread Pool -- 76)     
-2019-11-29 22:57:18,202 INFO  [stdout] (ServerService Thread Pool -- 76)     create table Paciente (
-2019-11-29 22:57:18,202 INFO  [stdout] (ServerService Thread Pool -- 76)        cpf varchar(11) not null,
-2019-11-29 22:57:18,202 INFO  [stdout] (ServerService Thread Pool -- 76)         email varchar(255),
-2019-11-29 22:57:18,202 INFO  [stdout] (ServerService Thread Pool -- 76)         telefoneCelular varchar(255),
-2019-11-29 22:57:18,202 INFO  [stdout] (ServerService Thread Pool -- 76)         telefoneResidencial varchar(255),
-2019-11-29 22:57:18,202 INFO  [stdout] (ServerService Thread Pool -- 76)         bairro varchar(255),
-2019-11-29 22:57:18,202 INFO  [stdout] (ServerService Thread Pool -- 76)         cep varchar(255),
-2019-11-29 22:57:18,202 INFO  [stdout] (ServerService Thread Pool -- 76)         logradouro varchar(255),
-2019-11-29 22:57:18,202 INFO  [stdout] (ServerService Thread Pool -- 76)         nome varchar(255) not null,
-2019-11-29 22:57:18,202 INFO  [stdout] (ServerService Thread Pool -- 76)         estadoPaciente_identificador integer,
-2019-11-29 22:57:18,202 INFO  [stdout] (ServerService Thread Pool -- 76)         primary key (cpf)
-2019-11-29 22:57:18,202 INFO  [stdout] (ServerService Thread Pool -- 76)     )
-2019-11-29 22:57:18,204 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
-2019-11-29 22:57:18,204 INFO  [stdout] (ServerService Thread Pool -- 76)     
-2019-11-29 22:57:18,204 INFO  [stdout] (ServerService Thread Pool -- 76)     create table Pessoa (
-2019-11-29 22:57:18,205 INFO  [stdout] (ServerService Thread Pool -- 76)        cpf varchar(11) not null,
-2019-11-29 22:57:18,205 INFO  [stdout] (ServerService Thread Pool -- 76)         email varchar(255),
-2019-11-29 22:57:18,205 INFO  [stdout] (ServerService Thread Pool -- 76)         telefoneCelular varchar(255),
-2019-11-29 22:57:18,205 INFO  [stdout] (ServerService Thread Pool -- 76)         telefoneResidencial varchar(255),
-2019-11-29 22:57:18,205 INFO  [stdout] (ServerService Thread Pool -- 76)         bairro varchar(255),
-2019-11-29 22:57:18,205 INFO  [stdout] (ServerService Thread Pool -- 76)         cep varchar(255),
-2019-11-29 22:57:18,205 INFO  [stdout] (ServerService Thread Pool -- 76)         logradouro varchar(255),
-2019-11-29 22:57:18,205 INFO  [stdout] (ServerService Thread Pool -- 76)         nome varchar(255) not null,
-2019-11-29 22:57:18,205 INFO  [stdout] (ServerService Thread Pool -- 76)         primary key (cpf)
-2019-11-29 22:57:18,205 INFO  [stdout] (ServerService Thread Pool -- 76)     )
-2019-11-29 22:57:18,207 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
-2019-11-29 22:57:18,207 INFO  [stdout] (ServerService Thread Pool -- 76)     
-2019-11-29 22:57:18,207 INFO  [stdout] (ServerService Thread Pool -- 76)     create table Responsavel (
-2019-11-29 22:57:18,207 INFO  [stdout] (ServerService Thread Pool -- 76)        cpf varchar(11) not null,
-2019-11-29 22:57:18,207 INFO  [stdout] (ServerService Thread Pool -- 76)         email varchar(255),
-2019-11-29 22:57:18,207 INFO  [stdout] (ServerService Thread Pool -- 76)         telefoneCelular varchar(255),
-2019-11-29 22:57:18,207 INFO  [stdout] (ServerService Thread Pool -- 76)         telefoneResidencial varchar(255),
-2019-11-29 22:57:18,207 INFO  [stdout] (ServerService Thread Pool -- 76)         bairro varchar(255),
-2019-11-29 22:57:18,207 INFO  [stdout] (ServerService Thread Pool -- 76)         cep varchar(255),
-2019-11-29 22:57:18,207 INFO  [stdout] (ServerService Thread Pool -- 76)         logradouro varchar(255),
-2019-11-29 22:57:18,207 INFO  [stdout] (ServerService Thread Pool -- 76)         nome varchar(255) not null,
-2019-11-29 22:57:18,207 INFO  [stdout] (ServerService Thread Pool -- 76)         login_usuario varchar(255),
-2019-11-29 22:57:18,208 INFO  [stdout] (ServerService Thread Pool -- 76)         primary key (cpf)
-2019-11-29 22:57:18,208 INFO  [stdout] (ServerService Thread Pool -- 76)     )
-2019-11-29 22:57:18,209 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
-2019-11-29 22:57:18,209 INFO  [stdout] (ServerService Thread Pool -- 76)     
-2019-11-29 22:57:18,209 INFO  [stdout] (ServerService Thread Pool -- 76)     create table Terminal (
-2019-11-29 22:57:18,209 INFO  [stdout] (ServerService Thread Pool -- 76)        identificador integer not null,
-2019-11-29 22:57:18,209 INFO  [stdout] (ServerService Thread Pool -- 76)         dataCadastro date not null,
-2019-11-29 22:57:18,209 INFO  [stdout] (ServerService Thread Pool -- 76)         mac varchar(255) not null,
-2019-11-29 22:57:18,209 INFO  [stdout] (ServerService Thread Pool -- 76)         nome varchar(255) not null,
-2019-11-29 22:57:18,209 INFO  [stdout] (ServerService Thread Pool -- 76)         statusTerminal varchar(255) not null,
-2019-11-29 22:57:18,209 INFO  [stdout] (ServerService Thread Pool -- 76)         primary key (identificador)
-2019-11-29 22:57:18,209 INFO  [stdout] (ServerService Thread Pool -- 76)     )
-2019-11-29 22:57:18,211 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
-2019-11-29 22:57:18,211 INFO  [stdout] (ServerService Thread Pool -- 76)     
-2019-11-29 22:57:18,211 INFO  [stdout] (ServerService Thread Pool -- 76)     alter table Paciente 
-2019-11-29 22:57:18,211 INFO  [stdout] (ServerService Thread Pool -- 76)        drop constraint if exists UK_888u06ygs7a7u1mvgx663m2nq
-2019-11-29 22:57:18,212 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
-2019-11-29 22:57:18,212 INFO  [stdout] (ServerService Thread Pool -- 76)     
-2019-11-29 22:57:18,212 INFO  [stdout] (ServerService Thread Pool -- 76)     alter table Paciente 
-2019-11-29 22:57:18,212 INFO  [stdout] (ServerService Thread Pool -- 76)        add constraint UK_888u06ygs7a7u1mvgx663m2nq unique (cep)
-2019-11-29 22:57:18,213 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
-2019-11-29 22:57:18,213 INFO  [stdout] (ServerService Thread Pool -- 76)     
-2019-11-29 22:57:18,213 INFO  [stdout] (ServerService Thread Pool -- 76)     alter table Pessoa 
-2019-11-29 22:57:18,214 INFO  [stdout] (ServerService Thread Pool -- 76)        drop constraint if exists UK_nbodti73lli2x1dvk4aua1rux
-2019-11-29 22:57:18,214 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
-2019-11-29 22:57:18,214 INFO  [stdout] (ServerService Thread Pool -- 76)     
-2019-11-29 22:57:18,214 INFO  [stdout] (ServerService Thread Pool -- 76)     alter table Pessoa 
-2019-11-29 22:57:18,214 INFO  [stdout] (ServerService Thread Pool -- 76)        add constraint UK_nbodti73lli2x1dvk4aua1rux unique (cep)
-2019-11-29 22:57:18,215 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
-2019-11-29 22:57:18,215 INFO  [stdout] (ServerService Thread Pool -- 76)     
-2019-11-29 22:57:18,215 INFO  [stdout] (ServerService Thread Pool -- 76)     alter table Responsavel 
-2019-11-29 22:57:18,215 INFO  [stdout] (ServerService Thread Pool -- 76)        drop constraint if exists UK_1rtmk58v3rhne7qku2jqfe885
-2019-11-29 22:57:18,215 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
-2019-11-29 22:57:18,215 INFO  [stdout] (ServerService Thread Pool -- 76)     
-2019-11-29 22:57:18,215 INFO  [stdout] (ServerService Thread Pool -- 76)     alter table Responsavel 
-2019-11-29 22:57:18,216 INFO  [stdout] (ServerService Thread Pool -- 76)        add constraint UK_1rtmk58v3rhne7qku2jqfe885 unique (cep)
-2019-11-29 22:57:18,216 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
-2019-11-29 22:57:18,216 INFO  [stdout] (ServerService Thread Pool -- 76)     
-2019-11-29 22:57:18,216 INFO  [stdout] (ServerService Thread Pool -- 76)     alter table Terminal 
-2019-11-29 22:57:18,216 INFO  [stdout] (ServerService Thread Pool -- 76)        drop constraint if exists UK_6uubhyavy7ke1yyicoe9u2rno
-2019-11-29 22:57:18,217 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
-2019-11-29 22:57:18,217 INFO  [stdout] (ServerService Thread Pool -- 76)     
-2019-11-29 22:57:18,217 INFO  [stdout] (ServerService Thread Pool -- 76)     alter table Terminal 
-2019-11-29 22:57:18,217 INFO  [stdout] (ServerService Thread Pool -- 76)        add constraint UK_6uubhyavy7ke1yyicoe9u2rno unique (mac)
-2019-11-29 22:57:18,217 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: create sequence hibernate_sequence start with 1 increment by 1
-2019-11-29 22:57:18,219 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
-2019-11-29 22:57:18,219 INFO  [stdout] (ServerService Thread Pool -- 76)     
-2019-11-29 22:57:18,219 INFO  [stdout] (ServerService Thread Pool -- 76)     alter table Monitoramento 
-2019-11-29 22:57:18,219 INFO  [stdout] (ServerService Thread Pool -- 76)        add constraint FKlnpk1kmjyxulyqttqnxblbndi 
-2019-11-29 22:57:18,219 INFO  [stdout] (ServerService Thread Pool -- 76)        foreign key (paciente_cpf) 
-2019-11-29 22:57:18,219 INFO  [stdout] (ServerService Thread Pool -- 76)        references Paciente
-2019-11-29 22:57:18,224 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
-2019-11-29 22:57:18,224 INFO  [stdout] (ServerService Thread Pool -- 76)     
-2019-11-29 22:57:18,224 INFO  [stdout] (ServerService Thread Pool -- 76)     alter table Monitoramento 
-2019-11-29 22:57:18,224 INFO  [stdout] (ServerService Thread Pool -- 76)        add constraint FK4yd48kyhatcuyak5be53awb4q 
-2019-11-29 22:57:18,224 INFO  [stdout] (ServerService Thread Pool -- 76)        foreign key (terminal_identificador) 
-2019-11-29 22:57:18,224 INFO  [stdout] (ServerService Thread Pool -- 76)        references Terminal
-2019-11-29 22:57:18,226 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
-2019-11-29 22:57:18,226 INFO  [stdout] (ServerService Thread Pool -- 76)     
-2019-11-29 22:57:18,226 INFO  [stdout] (ServerService Thread Pool -- 76)     alter table Paciente 
-2019-11-29 22:57:18,226 INFO  [stdout] (ServerService Thread Pool -- 76)        add constraint FKwhxlkw5lgn6kmwdwacvgirrr 
-2019-11-29 22:57:18,226 INFO  [stdout] (ServerService Thread Pool -- 76)        foreign key (estadoPaciente_identificador) 
-2019-11-29 22:57:18,226 INFO  [stdout] (ServerService Thread Pool -- 76)        references EstadoPaciente
-2019-11-29 22:57:18,228 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
-2019-11-29 22:57:18,228 INFO  [stdout] (ServerService Thread Pool -- 76)     
-2019-11-29 22:57:18,228 INFO  [stdout] (ServerService Thread Pool -- 76)     alter table Responsavel 
-2019-11-29 22:57:18,228 INFO  [stdout] (ServerService Thread Pool -- 76)        add constraint FKjum4j5rnoa27hpgjn3edsojge 
-2019-11-29 22:57:18,228 INFO  [stdout] (ServerService Thread Pool -- 76)        foreign key (login_usuario) 
-2019-11-29 22:57:18,229 INFO  [stdout] (ServerService Thread Pool -- 76)        references Login
-2019-11-29 22:57:18,342 INFO  [io.smallrye.metrics] (MSC service thread 1-3) MicroProfile: Metrics activated
-2019-11-29 22:57:19,340 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 78) RESTEASY002225: Deploying javax.ws.rs.core.Application: class br.ucb.uti.rest.RestApplication$Proxy$_$$_WeldClientProxy
-2019-11-29 22:57:19,423 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 78) WFLYUT0021: Registered web context: '/uti' for server 'default-server'
-2019-11-29 22:57:19,539 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 44) WFLYSRV0010: Deployed "uti.war" (runtime-name : "uti.war")
-2019-11-29 22:57:19,591 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
-2019-11-29 22:57:19,593 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
-2019-11-29 22:57:19,593 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
-2019-11-29 22:57:19,593 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Full 18.0.0.Final (WildFly Core 10.0.0.Final) started in 9973ms - Started 486 of 699 services (374 services are lazy, passive or on-demand)
-2019-11-29 23:07:31,826 INFO  [org.hibernate.hql.internal.QueryTranslatorFactoryInitiator] (default task-2) HHH000397: Using ASTQueryTranslatorFactory
-2019-11-29 23:07:31,911 INFO  [stdout] (default task-2) Hibernate: 
-2019-11-29 23:07:31,912 INFO  [stdout] (default task-2)     select
-2019-11-29 23:07:31,912 INFO  [stdout] (default task-2)         terminal0_.identificador as identifi1_6_,
-2019-11-29 23:07:31,912 INFO  [stdout] (default task-2)         terminal0_.dataCadastro as dataCada2_6_,
-2019-11-29 23:07:31,912 INFO  [stdout] (default task-2)         terminal0_.mac as mac3_6_,
-2019-11-29 23:07:31,912 INFO  [stdout] (default task-2)         terminal0_.nome as nome4_6_,
-2019-11-29 23:07:31,912 INFO  [stdout] (default task-2)         terminal0_.statusTerminal as statusTe5_6_ 
-2019-11-29 23:07:31,912 INFO  [stdout] (default task-2)     from
-2019-11-29 23:07:31,912 INFO  [stdout] (default task-2)         Terminal terminal0_
+2019-12-05 01:23:40,707 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 76) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'uti.war#UTI-PU'
+2019-12-05 01:23:40,807 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 76) HHH000204: Processing PersistenceUnitInfo [
+	name: UTI-PU
+	...]
+2019-12-05 01:23:40,819 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-6) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.4)
+2019-12-05 01:23:40,857 INFO  [org.jboss.weld.Version] (MSC service thread 1-6) WELD-000900: 3.1.2 (Final)
+2019-12-05 01:23:40,953 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) WFLYJCA0018: Started Driver service with driver-name = uti.war_org.h2.Driver_1_4
+2019-12-05 01:23:41,112 INFO  [org.hibernate.Version] (ServerService Thread Pool -- 76) HHH000412: Hibernate Core {5.3.12.Final}
+2019-12-05 01:23:41,114 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 76) HHH000206: hibernate.properties not found
+2019-12-05 01:23:41,181 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 77) WFLYCLINF0002: Started client-mappings cache from ejb container
+2019-12-05 01:23:41,555 INFO  [org.hibernate.annotations.common.Version] (ServerService Thread Pool -- 76) HCANN000001: Hibernate Commons Annotations {5.0.5.Final}
+2019-12-05 01:23:41,798 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 76) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'uti.war#UTI-PU'
+2019-12-05 01:23:42,008 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 76) HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-12-05 01:23:42,276 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 76) Envers integration enabled? : true
+2019-12-05 01:23:43,513 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
+2019-12-05 01:23:43,514 INFO  [stdout] (ServerService Thread Pool -- 76)     
+2019-12-05 01:23:43,514 INFO  [stdout] (ServerService Thread Pool -- 76)     create table EstadoPaciente (
+2019-12-05 01:23:43,514 INFO  [stdout] (ServerService Thread Pool -- 76)        identificador integer not null,
+2019-12-05 01:23:43,514 INFO  [stdout] (ServerService Thread Pool -- 76)         diastolicaMaxima double,
+2019-12-05 01:23:43,514 INFO  [stdout] (ServerService Thread Pool -- 76)         sistolicaMaxima double,
+2019-12-05 01:23:43,514 INFO  [stdout] (ServerService Thread Pool -- 76)         diastolicaMinima double,
+2019-12-05 01:23:43,514 INFO  [stdout] (ServerService Thread Pool -- 76)         sistolicaMinima double,
+2019-12-05 01:23:43,515 INFO  [stdout] (ServerService Thread Pool -- 76)         temperaturaAtual double not null,
+2019-12-05 01:23:43,515 INFO  [stdout] (ServerService Thread Pool -- 76)         temperaturaMaxima double not null,
+2019-12-05 01:23:43,515 INFO  [stdout] (ServerService Thread Pool -- 76)         temperaturaMinima double not null,
+2019-12-05 01:23:43,515 INFO  [stdout] (ServerService Thread Pool -- 76)         primary key (identificador)
+2019-12-05 01:23:43,515 INFO  [stdout] (ServerService Thread Pool -- 76)     )
+2019-12-05 01:23:43,521 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
+2019-12-05 01:23:43,521 INFO  [stdout] (ServerService Thread Pool -- 76)     
+2019-12-05 01:23:43,522 INFO  [stdout] (ServerService Thread Pool -- 76)     create table Login (
+2019-12-05 01:23:43,522 INFO  [stdout] (ServerService Thread Pool -- 76)        usuario varchar(255) not null,
+2019-12-05 01:23:43,522 INFO  [stdout] (ServerService Thread Pool -- 76)         senha varchar(255) not null,
+2019-12-05 01:23:43,522 INFO  [stdout] (ServerService Thread Pool -- 76)         primary key (usuario)
+2019-12-05 01:23:43,522 INFO  [stdout] (ServerService Thread Pool -- 76)     )
+2019-12-05 01:23:43,527 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
+2019-12-05 01:23:43,527 INFO  [stdout] (ServerService Thread Pool -- 76)     
+2019-12-05 01:23:43,528 INFO  [stdout] (ServerService Thread Pool -- 76)     create table Monitoramento (
+2019-12-05 01:23:43,528 INFO  [stdout] (ServerService Thread Pool -- 76)        id integer not null,
+2019-12-05 01:23:43,528 INFO  [stdout] (ServerService Thread Pool -- 76)         momentoConsulta timestamp,
+2019-12-05 01:23:43,528 INFO  [stdout] (ServerService Thread Pool -- 76)         diastolicaConsultada double,
+2019-12-05 01:23:43,528 INFO  [stdout] (ServerService Thread Pool -- 76)         sistolicaConsultada double,
+2019-12-05 01:23:43,528 INFO  [stdout] (ServerService Thread Pool -- 76)         temperaturaConsultada double not null,
+2019-12-05 01:23:43,528 INFO  [stdout] (ServerService Thread Pool -- 76)         paciente_cpf varchar(11),
+2019-12-05 01:23:43,529 INFO  [stdout] (ServerService Thread Pool -- 76)         terminal_identificador integer,
+2019-12-05 01:23:43,529 INFO  [stdout] (ServerService Thread Pool -- 76)         primary key (id)
+2019-12-05 01:23:43,529 INFO  [stdout] (ServerService Thread Pool -- 76)     )
+2019-12-05 01:23:43,532 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
+2019-12-05 01:23:43,532 INFO  [stdout] (ServerService Thread Pool -- 76)     
+2019-12-05 01:23:43,533 INFO  [stdout] (ServerService Thread Pool -- 76)     create table Paciente (
+2019-12-05 01:23:43,533 INFO  [stdout] (ServerService Thread Pool -- 76)        cpf varchar(11) not null,
+2019-12-05 01:23:43,533 INFO  [stdout] (ServerService Thread Pool -- 76)         email varchar(255),
+2019-12-05 01:23:43,533 INFO  [stdout] (ServerService Thread Pool -- 76)         telefoneCelular varchar(255),
+2019-12-05 01:23:43,533 INFO  [stdout] (ServerService Thread Pool -- 76)         telefoneResidencial varchar(255),
+2019-12-05 01:23:43,533 INFO  [stdout] (ServerService Thread Pool -- 76)         bairro varchar(255),
+2019-12-05 01:23:43,533 INFO  [stdout] (ServerService Thread Pool -- 76)         cep varchar(255),
+2019-12-05 01:23:43,534 INFO  [stdout] (ServerService Thread Pool -- 76)         logradouro varchar(255),
+2019-12-05 01:23:43,534 INFO  [stdout] (ServerService Thread Pool -- 76)         nome varchar(255) not null,
+2019-12-05 01:23:43,534 INFO  [stdout] (ServerService Thread Pool -- 76)         estadoPaciente_identificador integer,
+2019-12-05 01:23:43,534 INFO  [stdout] (ServerService Thread Pool -- 76)         primary key (cpf)
+2019-12-05 01:23:43,534 INFO  [stdout] (ServerService Thread Pool -- 76)     )
+2019-12-05 01:23:43,537 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
+2019-12-05 01:23:43,538 INFO  [stdout] (ServerService Thread Pool -- 76)     
+2019-12-05 01:23:43,538 INFO  [stdout] (ServerService Thread Pool -- 76)     create table Pessoa (
+2019-12-05 01:23:43,538 INFO  [stdout] (ServerService Thread Pool -- 76)        cpf varchar(11) not null,
+2019-12-05 01:23:43,538 INFO  [stdout] (ServerService Thread Pool -- 76)         email varchar(255),
+2019-12-05 01:23:43,539 INFO  [stdout] (ServerService Thread Pool -- 76)         telefoneCelular varchar(255),
+2019-12-05 01:23:43,539 INFO  [stdout] (ServerService Thread Pool -- 76)         telefoneResidencial varchar(255),
+2019-12-05 01:23:43,539 INFO  [stdout] (ServerService Thread Pool -- 76)         bairro varchar(255),
+2019-12-05 01:23:43,539 INFO  [stdout] (ServerService Thread Pool -- 76)         cep varchar(255),
+2019-12-05 01:23:43,539 INFO  [stdout] (ServerService Thread Pool -- 76)         logradouro varchar(255),
+2019-12-05 01:23:43,539 INFO  [stdout] (ServerService Thread Pool -- 76)         nome varchar(255) not null,
+2019-12-05 01:23:43,539 INFO  [stdout] (ServerService Thread Pool -- 76)         primary key (cpf)
+2019-12-05 01:23:43,539 INFO  [stdout] (ServerService Thread Pool -- 76)     )
+2019-12-05 01:23:43,541 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
+2019-12-05 01:23:43,541 INFO  [stdout] (ServerService Thread Pool -- 76)     
+2019-12-05 01:23:43,542 INFO  [stdout] (ServerService Thread Pool -- 76)     create table Responsavel (
+2019-12-05 01:23:43,542 INFO  [stdout] (ServerService Thread Pool -- 76)        cpf varchar(11) not null,
+2019-12-05 01:23:43,542 INFO  [stdout] (ServerService Thread Pool -- 76)         email varchar(255),
+2019-12-05 01:23:43,542 INFO  [stdout] (ServerService Thread Pool -- 76)         telefoneCelular varchar(255),
+2019-12-05 01:23:43,542 INFO  [stdout] (ServerService Thread Pool -- 76)         telefoneResidencial varchar(255),
+2019-12-05 01:23:43,542 INFO  [stdout] (ServerService Thread Pool -- 76)         bairro varchar(255),
+2019-12-05 01:23:43,542 INFO  [stdout] (ServerService Thread Pool -- 76)         cep varchar(255),
+2019-12-05 01:23:43,542 INFO  [stdout] (ServerService Thread Pool -- 76)         logradouro varchar(255),
+2019-12-05 01:23:43,543 INFO  [stdout] (ServerService Thread Pool -- 76)         nome varchar(255) not null,
+2019-12-05 01:23:43,543 INFO  [stdout] (ServerService Thread Pool -- 76)         login_usuario varchar(255),
+2019-12-05 01:23:43,543 INFO  [stdout] (ServerService Thread Pool -- 76)         primary key (cpf)
+2019-12-05 01:23:43,543 INFO  [stdout] (ServerService Thread Pool -- 76)     )
+2019-12-05 01:23:43,545 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
+2019-12-05 01:23:43,545 INFO  [stdout] (ServerService Thread Pool -- 76)     
+2019-12-05 01:23:43,545 INFO  [stdout] (ServerService Thread Pool -- 76)     create table Terminal (
+2019-12-05 01:23:43,545 INFO  [stdout] (ServerService Thread Pool -- 76)        identificador integer not null,
+2019-12-05 01:23:43,545 INFO  [stdout] (ServerService Thread Pool -- 76)         dataCadastro date not null,
+2019-12-05 01:23:43,545 INFO  [stdout] (ServerService Thread Pool -- 76)         mac varchar(255) not null,
+2019-12-05 01:23:43,545 INFO  [stdout] (ServerService Thread Pool -- 76)         nome varchar(255) not null,
+2019-12-05 01:23:43,545 INFO  [stdout] (ServerService Thread Pool -- 76)         statusTerminal varchar(255) not null,
+2019-12-05 01:23:43,546 INFO  [stdout] (ServerService Thread Pool -- 76)         primary key (identificador)
+2019-12-05 01:23:43,546 INFO  [stdout] (ServerService Thread Pool -- 76)     )
+2019-12-05 01:23:43,548 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
+2019-12-05 01:23:43,548 INFO  [stdout] (ServerService Thread Pool -- 76)     
+2019-12-05 01:23:43,548 INFO  [stdout] (ServerService Thread Pool -- 76)     alter table Paciente 
+2019-12-05 01:23:43,549 INFO  [stdout] (ServerService Thread Pool -- 76)        drop constraint if exists UK_888u06ygs7a7u1mvgx663m2nq
+2019-12-05 01:23:43,549 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
+2019-12-05 01:23:43,549 INFO  [stdout] (ServerService Thread Pool -- 76)     
+2019-12-05 01:23:43,549 INFO  [stdout] (ServerService Thread Pool -- 76)     alter table Paciente 
+2019-12-05 01:23:43,549 INFO  [stdout] (ServerService Thread Pool -- 76)        add constraint UK_888u06ygs7a7u1mvgx663m2nq unique (cep)
+2019-12-05 01:23:43,551 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
+2019-12-05 01:23:43,551 INFO  [stdout] (ServerService Thread Pool -- 76)     
+2019-12-05 01:23:43,551 INFO  [stdout] (ServerService Thread Pool -- 76)     alter table Pessoa 
+2019-12-05 01:23:43,551 INFO  [stdout] (ServerService Thread Pool -- 76)        drop constraint if exists UK_nbodti73lli2x1dvk4aua1rux
+2019-12-05 01:23:43,552 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
+2019-12-05 01:23:43,552 INFO  [stdout] (ServerService Thread Pool -- 76)     
+2019-12-05 01:23:43,552 INFO  [stdout] (ServerService Thread Pool -- 76)     alter table Pessoa 
+2019-12-05 01:23:43,552 INFO  [stdout] (ServerService Thread Pool -- 76)        add constraint UK_nbodti73lli2x1dvk4aua1rux unique (cep)
+2019-12-05 01:23:43,553 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
+2019-12-05 01:23:43,554 INFO  [stdout] (ServerService Thread Pool -- 76)     
+2019-12-05 01:23:43,554 INFO  [stdout] (ServerService Thread Pool -- 76)     alter table Responsavel 
+2019-12-05 01:23:43,554 INFO  [stdout] (ServerService Thread Pool -- 76)        drop constraint if exists UK_1rtmk58v3rhne7qku2jqfe885
+2019-12-05 01:23:43,554 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
+2019-12-05 01:23:43,554 INFO  [stdout] (ServerService Thread Pool -- 76)     
+2019-12-05 01:23:43,554 INFO  [stdout] (ServerService Thread Pool -- 76)     alter table Responsavel 
+2019-12-05 01:23:43,554 INFO  [stdout] (ServerService Thread Pool -- 76)        add constraint UK_1rtmk58v3rhne7qku2jqfe885 unique (cep)
+2019-12-05 01:23:43,555 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
+2019-12-05 01:23:43,555 INFO  [stdout] (ServerService Thread Pool -- 76)     
+2019-12-05 01:23:43,555 INFO  [stdout] (ServerService Thread Pool -- 76)     alter table Terminal 
+2019-12-05 01:23:43,555 INFO  [stdout] (ServerService Thread Pool -- 76)        drop constraint if exists UK_6uubhyavy7ke1yyicoe9u2rno
+2019-12-05 01:23:43,556 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
+2019-12-05 01:23:43,556 INFO  [stdout] (ServerService Thread Pool -- 76)     
+2019-12-05 01:23:43,556 INFO  [stdout] (ServerService Thread Pool -- 76)     alter table Terminal 
+2019-12-05 01:23:43,556 INFO  [stdout] (ServerService Thread Pool -- 76)        add constraint UK_6uubhyavy7ke1yyicoe9u2rno unique (mac)
+2019-12-05 01:23:43,557 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: create sequence hibernate_sequence start with 1 increment by 1
+2019-12-05 01:23:43,559 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
+2019-12-05 01:23:43,559 INFO  [stdout] (ServerService Thread Pool -- 76)     
+2019-12-05 01:23:43,560 INFO  [stdout] (ServerService Thread Pool -- 76)     alter table Monitoramento 
+2019-12-05 01:23:43,560 INFO  [stdout] (ServerService Thread Pool -- 76)        add constraint FKlnpk1kmjyxulyqttqnxblbndi 
+2019-12-05 01:23:43,560 INFO  [stdout] (ServerService Thread Pool -- 76)        foreign key (paciente_cpf) 
+2019-12-05 01:23:43,560 INFO  [stdout] (ServerService Thread Pool -- 76)        references Paciente
+2019-12-05 01:23:43,569 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
+2019-12-05 01:23:43,569 INFO  [stdout] (ServerService Thread Pool -- 76)     
+2019-12-05 01:23:43,569 INFO  [stdout] (ServerService Thread Pool -- 76)     alter table Monitoramento 
+2019-12-05 01:23:43,569 INFO  [stdout] (ServerService Thread Pool -- 76)        add constraint FK4yd48kyhatcuyak5be53awb4q 
+2019-12-05 01:23:43,569 INFO  [stdout] (ServerService Thread Pool -- 76)        foreign key (terminal_identificador) 
+2019-12-05 01:23:43,570 INFO  [stdout] (ServerService Thread Pool -- 76)        references Terminal
+2019-12-05 01:23:43,574 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
+2019-12-05 01:23:43,574 INFO  [stdout] (ServerService Thread Pool -- 76)     
+2019-12-05 01:23:43,575 INFO  [stdout] (ServerService Thread Pool -- 76)     alter table Paciente 
+2019-12-05 01:23:43,575 INFO  [stdout] (ServerService Thread Pool -- 76)        add constraint FKwhxlkw5lgn6kmwdwacvgirrr 
+2019-12-05 01:23:43,575 INFO  [stdout] (ServerService Thread Pool -- 76)        foreign key (estadoPaciente_identificador) 
+2019-12-05 01:23:43,575 INFO  [stdout] (ServerService Thread Pool -- 76)        references EstadoPaciente
+2019-12-05 01:23:43,577 INFO  [stdout] (ServerService Thread Pool -- 76) Hibernate: 
+2019-12-05 01:23:43,577 INFO  [stdout] (ServerService Thread Pool -- 76)     
+2019-12-05 01:23:43,577 INFO  [stdout] (ServerService Thread Pool -- 76)     alter table Responsavel 
+2019-12-05 01:23:43,577 INFO  [stdout] (ServerService Thread Pool -- 76)        add constraint FKjum4j5rnoa27hpgjn3edsojge 
+2019-12-05 01:23:43,577 INFO  [stdout] (ServerService Thread Pool -- 76)        foreign key (login_usuario) 
+2019-12-05 01:23:43,577 INFO  [stdout] (ServerService Thread Pool -- 76)        references Login
+2019-12-05 01:23:43,748 INFO  [io.smallrye.metrics] (MSC service thread 1-3) MicroProfile: Metrics activated
+2019-12-05 01:23:45,180 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 76) RESTEASY002225: Deploying javax.ws.rs.core.Application: class br.ucb.uti.rest.RestApplication$Proxy$_$$_WeldClientProxy
+2019-12-05 01:23:45,265 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 76) WFLYUT0021: Registered web context: '/uti' for server 'default-server'

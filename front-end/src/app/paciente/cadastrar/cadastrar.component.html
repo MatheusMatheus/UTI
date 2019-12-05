@@ -1,0 +1,124 @@
+<section class="container-cadastro">
+  <h1>Cadastro de Paciente</h1>
+  <div class="esquerdo">
+    <form #form="ngForm" (submit)="cadastrar(form)" [ngClass]="{'ng-submitted': form.submitted}">
+      <div class="form-itens">
+        <mat-form-field class="item">
+          <label>Nome</label>
+          <input matInput autocomplete="off" name="nome" [(ngModel)]="paciente.nome" required minlength="3"
+            maxlength="150" #modelNome="ngModel" />
+        </mat-form-field>
+
+        <mat-form-field class="item">
+          <label>CPF</label>
+          <input matInput autocomplete="off" name="cpf" [(ngModel)]="paciente.cpf" required minlength="11"
+            maxlength="11" #modelNome="ngModel" />
+        </mat-form-field>
+
+        <mat-form-field class="item">
+          <label>Endereço</label>
+          <input matInput autocomplete="off" name="logradouro" [(ngModel)]="paciente.endereco.logradouro" required
+            minlength="1" maxlength="50" #modelNome="ngModel" />
+        </mat-form-field>
+
+        <mat-form-field class="item">
+          <label>Bairro</label>
+          <input matInput autocomplete="off" name="bairro" [(ngModel)]="paciente.endereco.bairro" minlength="1"
+            maxlength="50" #modelNome="ngModel" />
+        </mat-form-field>
+
+        <mat-form-field class="item">
+          <label>Cep</label>
+          <input matInput autocomplete="off" name="cep" [(ngModel)]="paciente.endereco.cep" minlength="8" maxlength="8"
+            #modelNome="ngModel" />
+        </mat-form-field>
+
+        <mat-form-field class="item">
+          <label>Telefone</label>
+          <input matInput autocomplete="off" name="telefoneResidencial"
+            [(ngModel)]="paciente.contato.telefoneResidencial" minlength="9" maxlength="9" #modelNome="ngModel" />
+        </mat-form-field>
+
+        <div class="actions">
+          <button mat-raised-button color="primary">Salvar</button>
+          <button mat-button type="button" (click)="cancelar(form)">Cancelar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="direito">
+    <form #form="ngForm" (submit)="cadastrar(form)" [ngClass]="{'ng-submitted': form.submitted}">
+      <div class="form-itens">
+        <mat-toolbar>
+          <mat-toolbar-row>
+            <mat-form-field class="item-lado">
+              <label>Temperatura Atual</label>
+              <input matInput autocomplete="off" name="nome" [(ngModel)]="paciente.estadoPaciente.temperaturaAtual"
+                required maxlength="150" #modelNome="ngModel" />
+            </mat-form-field>
+
+            <mat-form-field>
+              <label>Temperatura Mínima</label>
+              <input matInput autocomplete="off" name="nome" [(ngModel)]="paciente.estadoPaciente.temperaturaMinima"
+                required maxlength="150" #modelNome="ngModel" />
+            </mat-form-field>
+
+            <mat-form-field class="item-lado">
+              <label>Temperatura Máxima</label>
+              <input matInput autocomplete="off" name="nome" [(ngModel)]="paciente.estadoPaciente.temperaturaMaxima"
+                required maxlength="150" #modelNome="ngModel" />
+            </mat-form-field>
+          </mat-toolbar-row>
+
+          <mat-toolbar-row>
+            <mat-form-field class="item-lado">
+              <label>Pressão Sistólica Atual</label>
+              <input matInput autocomplete="off" name="cpf" [(ngModel)]="paciente.cpf" required minlength="11"
+                maxlength="11" #modelNome="ngModel" />
+            </mat-form-field>
+
+            <mat-form-field class="item-lado">
+              <label>Pressão Disatólica Atual</label>
+              <input matInput autocomplete="off" name="cpf" [(ngModel)]="paciente.cpf" required minlength="11"
+                maxlength="11" #modelNome="ngModel" />
+            </mat-form-field>
+          </mat-toolbar-row>
+
+          <mat-toolbar-row>
+            <mat-form-field class="item-lado">
+              <label>Pressão Sistólica Mímina</label>
+              <input matInput autocomplete="off" name="cpf" [(ngModel)]="paciente.cpf" required minlength="11"
+                maxlength="11" #modelNome="ngModel" />
+            </mat-form-field>
+
+            <mat-form-field class="item-lado">
+              <label>Pressão Disatólica Màxima</label>
+              <input matInput autocomplete="off" name="cpf" [(ngModel)]="paciente.cpf" required minlength="11"
+                maxlength="11" #modelNome="ngModel" />
+            </mat-form-field>
+          </mat-toolbar-row>
+
+          <mat-toolbar-row>
+            <mat-form-field class="item">
+                <mat-label>Selecione um terminal</mat-label>
+                <mat-select [(ngModel)]="terminal.identificador" name = "identificador">
+                        <mat-option value="ATIVO">Ativo</mat-option>
+                        <mat-option value="INATIVO">Inativo</mat-option>
+                </mat-select>
+            </mat-form-field>
+          </mat-toolbar-row>
+
+          <mat-toolbar-row>
+              <div class="actions">
+                  <button mat-raised-button color="primary">Salvar</button>
+                  <button mat-button type="button" (click)="cancelar(form)">Cancelar</button>
+                </div>
+          </mat-toolbar-row>
+        </mat-toolbar>
+
+
+      </div>
+    </form>
+  </div>
+</section>

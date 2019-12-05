@@ -5,6 +5,9 @@
 front-end/node-modules/
 target/
 .idea
+wildfly-18.0.0.Final/standalone/configuration/standalone_xml_history/
+wildfly-18.0.0.Final/standalone/log/
+
 ### Eclipse ###
 .metadata
 bin/

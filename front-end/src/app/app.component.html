@@ -5,33 +5,12 @@
   [ngClass]="{'active': transfActive.isActive}"
 >Terminal</a>
 
-<a routerLink="/crud/cliente"
+<a routerLink="/paciente/cadastro"
      routerLinkActive
      [routerLinkActiveOptions]="{exact: true}"
      #clienteAtivo="routerLinkActive"
      [ngClass]="{'active': clienteAtivo.isActive}"
-  >Clientes</a>
-  <a routerLink="/crud/conta"
-     routerLinkActive
-     #contaAtiva="routerLinkActive"
-     [ngClass]="{'active': contaAtiva.isActive}"
-  >Contas</a>
-
-  <a routerLink="/transacoes/deposito"
-     routerLinkActive
-     #depositoActive="routerLinkActive"
-     [ngClass]="{'active': depositoActive.isActive}"
-  >Depósito</a>
-  <a routerLink="/transacoes/saque"
-     routerLinkActive
-     #saqueActive="routerLinkActive"
-     [ngClass]="{'active': saqueActive.isActive}"
-  >Saque</a>
-  <a routerLink="/transacoes/transferencia"
-     routerLinkActive
-     #transfActive="routerLinkActive"
-     [ngClass]="{'active': transfActive.isActive}"
-  >Transferência</a>
+  >Paciente</a>
 </div>
 
 
