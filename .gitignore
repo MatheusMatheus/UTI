@@ -7,7 +7,7 @@ target/
 .idea
 wildfly-18.0.0.Final/standalone/configuration/standalone_xml_history/
 wildfly-18.0.0.Final/standalone/log/
-
+front-end/package-lock.json
 ### Eclipse ###
 .metadata
 bin/
