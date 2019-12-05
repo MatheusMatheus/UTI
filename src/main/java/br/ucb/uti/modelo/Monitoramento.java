@@ -1,10 +1,24 @@
 package br.ucb.uti.modelo;
 
-import lombok.*;
+import java.time.LocalDateTime;
 
 import javax.json.bind.annotation.JsonbDateFormat;
-import javax.persistence.*;
-import java.time.LocalDateTime;
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
+import javax.persistence.Column;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToOne;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 
 @AllArgsConstructor
@@ -13,6 +27,11 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Entity
+@NamedQueries({
+	@NamedQuery(
+			name = "Monitoramento.findPacienteId", 
+			query = "SELECT m.pacienteMonitorado from Monitoramento m where m.pacienteMonitorado.paciente.cpf = :pacienteID")
+})
 public class Monitoramento {
 
     @Id
@@ -23,10 +42,7 @@ public class Monitoramento {
     private LocalDateTime momentoConsulta;
 
     @OneToOne
-    private Paciente paciente;
-
-    @OneToOne
-    private Terminal terminal;
+    private PacienteMonitorado pacienteMonitorado;
 
     @Embedded
     @AttributeOverrides(

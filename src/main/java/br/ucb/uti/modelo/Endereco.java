@@ -1,11 +1,14 @@
 package br.ucb.uti.modelo;
 
-import lombok.*;
-
 import javax.json.Json;
 import javax.json.JsonObjectBuilder;
-import javax.persistence.Column;
 import javax.persistence.Embeddable;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,7 +22,6 @@ public class Endereco {
 
     private String bairro;
 
-    @Column(unique = true)
     private String cep;
 
     public JsonObjectBuilder toJson() {

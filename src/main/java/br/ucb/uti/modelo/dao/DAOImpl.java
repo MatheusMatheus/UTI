@@ -15,7 +15,7 @@ public class DAOImpl<T> implements DAO<T> {
     }
 
     @PersistenceContext(unitName = "UTI-PU")
-    private EntityManager manager;
+    protected EntityManager manager;
 
     @Override
     public void insert(T entidade) {

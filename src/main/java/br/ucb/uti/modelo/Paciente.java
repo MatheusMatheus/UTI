@@ -5,6 +5,7 @@ import lombok.*;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
+import javax.validation.constraints.NotNull;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -15,7 +16,8 @@ import javax.persistence.OneToOne;
 @Entity(name = "Paciente")
 public class Paciente extends Pessoa {
 
-    @OneToOne(
+	@NotNull
+	@OneToOne(
             cascade = CascadeType.ALL,
             orphanRemoval = true)
     private EstadoPaciente estadoPaciente;

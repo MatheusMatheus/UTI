@@ -1,0 +1,27 @@
+{
+	"cpf" : "11111111111",
+	"nome": "Pigtolomeu",
+	"estadoPaciente": {
+		"temperaturaAtual": "36.1",
+		"temperaturaMinima": "35.1",
+		"temperaturaMaxima": "40.2",
+		"pressaoMinima": {
+			"sistolica": "120",
+			"diastolica": "80"
+		},
+		"pressaoMaxima": {
+			"sistolica": "160",
+			"diastolica": "100"
+		}
+	},
+	"contato": {
+		"telefoneResidencial": "35789111",
+		"telefoneCelular": "99999999",
+		"email": "teste@email.com"
+	},
+	"endereco": {
+		"logradouro": "Rua dos Bobos",
+		"bairro": "Avenida pau no cu",
+		"cep": "2222222"
+	}
+}

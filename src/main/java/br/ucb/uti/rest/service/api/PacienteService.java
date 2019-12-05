@@ -1,8 +1,10 @@
 package br.ucb.uti.rest.service.api;
 
-import br.ucb.uti.modelo.Paciente;
-
-import javax.ws.rs.*;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
 @Path("paciente")
@@ -11,14 +13,10 @@ import javax.ws.rs.core.Response;
 public interface PacienteService {
 
     @GET
+    @Path("todos")
     Response getPacientes();
 
     @GET
     @Path("{id}")
     Response getPaciente(@PathParam("id") Integer id);
-
-    @POST
-    @Path("novo")
-    Response cadastrar(Paciente paciente);
-
 }

@@ -1,0 +1,13 @@
+{
+	"nome" : "Matheus", 
+	"mac": "AA:AA:AA:AA:AB",
+        "dataCadastro": "10/11/2019",
+	"statusTerminal": "ATIVO"
+}
+
+{
+	"nome" : "Terminal da ala dos aliejados", 
+	"mac": "AA:AA:AA:CC:AB",
+    "dataCadastro": "10/11/2019",
+	"statusTerminal": "ATIVO"
+}

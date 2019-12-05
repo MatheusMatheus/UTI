@@ -1,23 +1,20 @@
 package br.ucb.uti.modelo;
 
-import lombok.*;
-
 import javax.persistence.Entity;
-import javax.persistence.OneToOne;
 
-@AllArgsConstructor
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 @NoArgsConstructor
 @Getter
 @Setter
 @Entity(name = "Responsavel")
 public class Responsavel extends Pessoa{
 
-    @OneToOne
-    private Login login;
-
     @Builder
-    public Responsavel(String nome, String cpf, Contato contato, Endereco endereco, Login login) {
+    public Responsavel(String nome, String cpf, Contato contato, Endereco endereco) {
         super(nome, cpf, contato, endereco);
-        this.login = login;
     }
 }
