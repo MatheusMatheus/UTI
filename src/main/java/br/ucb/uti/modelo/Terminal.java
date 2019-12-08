@@ -1,10 +1,22 @@
 package br.ucb.uti.modelo;
 
-import lombok.*;
+import java.time.LocalDate;
 
 import javax.json.bind.annotation.JsonbDateFormat;
-import javax.persistence.*;
-import java.time.LocalDate;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.validation.constraints.NotNull;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -31,4 +43,8 @@ public class Terminal {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private StatusTerminal statusTerminal;
+    
+    @OneToOne
+    @NotNull
+    private Paciente paciente;
 }

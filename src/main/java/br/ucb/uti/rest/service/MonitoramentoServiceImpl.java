@@ -1,34 +1,45 @@
 package br.ucb.uti.rest.service;
 
+import java.util.List;
+
+import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.persistence.NoResultException;
 import javax.ws.rs.core.Response;
 
 import br.ucb.uti.modelo.Monitoramento;
-import br.ucb.uti.modelo.PacienteMonitorado;
+import br.ucb.uti.modelo.Terminal;
 import br.ucb.uti.modelo.dao.MonitoramentoDAO;
-import br.ucb.uti.modelo.dao.PacienteDAO;
-import br.ucb.uti.modelo.dao.PacienteMonitoradoDAO;
 import br.ucb.uti.modelo.dao.TerminalDAO;
 import br.ucb.uti.rest.service.api.MonitoramentoService;
+import br.ucb.uti.rest.service.requisicoes.MonitoramentoDTO;
 
+@Stateless
 public class MonitoramentoServiceImpl implements MonitoramentoService {
 
 	@Inject
-	private PacienteDAO pacienteDAO;
-	
+	private MonitoramentoDAO monitoraDAO;
+
 	@Inject
 	private TerminalDAO terminalDAO;
-	
-	@Inject
-	private MonitoramentoDAO monitoraDAO;
-	
-	@Inject
-	private PacienteMonitoradoDAO pacienteMonitoradoDAO;
 
 	@Override
-	public Response monitora(Monitoramento monitoramento) {
+	public Response associaPaciente(MonitoramentoDTO monitoramentoDTO) {
 		try {
+			Terminal terminal = terminalDAO.findById(monitoramentoDTO.getTerminal().getIdentificador());
+			if (terminal == null) {
+				throw new NoResultException();
+			}
+
+			Monitoramento monitoramento = Monitoramento.builder()
+					.momentoConsulta(monitoramentoDTO.getMomentoConsulta())
+					.pressaoConsultada(monitoramentoDTO.getPressaoConsultada())
+					.temperaturaConsultada(monitoramentoDTO.getTemperaturaConsultada())
+					.terminal(terminal)
+					.build();
+
 			monitoraDAO.insert(monitoramento);
+
 			return Response.noContent().status(Response.Status.ACCEPTED).build();
 		} catch (Exception e) {
 			return Response.notModified().build();
@@ -36,15 +47,13 @@ public class MonitoramentoServiceImpl implements MonitoramentoService {
 	}
 
 	@Override
-	public Response associaPaciente(PacienteMonitorado monitoramento) {
+	public Response monitora(String id) {
 		try {
-			terminalDAO.insert(monitoramento.getTerminal());
-			pacienteDAO.insert(monitoramento.getPaciente());
-			pacienteMonitoradoDAO.insert(monitoramento);
-			return Response.noContent().status(Response.Status.ACCEPTED).build();
+			List<Monitoramento> monitoramentos = monitoraDAO.findAll();
+			return Response.ok().entity(monitoraDAO.findPacienteId(id)).build();
+
 		} catch (Exception e) {
 			return Response.notModified().build();
 		}
 	}
-
 }

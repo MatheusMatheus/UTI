@@ -20,29 +20,28 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
-@Getter
 @Setter
+@Getter
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @NamedQueries({
 	@NamedQuery(
 			name = "Monitoramento.findPacienteId", 
-			query = "SELECT m.pacienteMonitorado from Monitoramento m where m.pacienteMonitorado.paciente.cpf = :pacienteID")
+			query = "SELECT m from Monitoramento m where m.terminal.paciente.cpf = :pacienteID")
 })
 public class Monitoramento {
-
-    @Id
-    @GeneratedValue
-    private int id;
-
-    @JsonbDateFormat(value = "dd/MM/yyyy HH:mm:ss")
-    private LocalDateTime momentoConsulta;
+	
+	@Id
+	@GeneratedValue
+	private Integer id;
 
     @OneToOne
-    private PacienteMonitorado pacienteMonitorado;
+    private Terminal terminal;
+    
+    @JsonbDateFormat(value = "dd/MM/yyyy HH:mm:ss")
+    private LocalDateTime momentoConsulta;
 
     @Embedded
     @AttributeOverrides(
@@ -54,4 +53,5 @@ public class Monitoramento {
     private Pressao pressaoConsultada;
 
     private double temperaturaConsultada;
+
 }

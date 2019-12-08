@@ -17,7 +17,7 @@ import javax.validation.constraints.Size;
 public class Pessoa {
 
     @Id
-    @Column(length = 11)
+    @Column(name = "cpf", updatable = false, nullable = false, length = 11)
     @Size(min = 11, max = 11)
     private String cpf;
 

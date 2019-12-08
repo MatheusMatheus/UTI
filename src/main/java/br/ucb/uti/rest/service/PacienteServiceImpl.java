@@ -4,9 +4,8 @@ import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.ws.rs.core.Response;
 
-import br.ucb.uti.modelo.PacienteMonitorado;
+import br.ucb.uti.modelo.Paciente;
 import br.ucb.uti.modelo.dao.PacienteDAO;
-import br.ucb.uti.modelo.dao.PacienteMonitoradoDAO;
 import br.ucb.uti.rest.service.api.PacienteService;
 
 @Stateless
@@ -15,9 +14,6 @@ public class PacienteServiceImpl implements PacienteService {
     @Inject
     private PacienteDAO pacienteDAO;
     
-    @Inject 
-    private PacienteMonitoradoDAO monitorDAO;
-
     @Override
     public Response getPacientes() {
         try {
@@ -38,13 +34,13 @@ public class PacienteServiceImpl implements PacienteService {
         }
     }
 
-    @Override
-    public Response cadastrar(PacienteMonitorado paciente) {
+	@Override
+	public Response cadastrar(Paciente paciente) {
         try {
-            monitorDAO.insert(paciente);
+        	pacienteDAO.insert(paciente);
             return Response.noContent().status(Response.Status.ACCEPTED).build();
         } catch (Exception e) {
             return Response.notModified().build();
         }
-    }
+	}
 }
