@@ -5,20 +5,37 @@ import { PressaoComponent } from './pressao/pressao.component';
 import { TemperaturaComponent } from './temperatura/temperatura.component';
 import { InfoPacienteComponent } from './info-paciente/info-paciente.component';
 import { RouterModule } from '@angular/router';
-import { MatCardModule } from '@angular/material';
+import { MatCardModule, MatDialogModule, MatSelectModule } from '@angular/material';
 import { BatimentosComponent } from './batimentos/batimentos.component';
+import { NegocioModule } from '../negocio/negocio.module';
+import { CaixaDialogoComponent } from './caixa-dialogo/caixa-dialogo.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [MonitoramentoComponent, PressaoComponent, TemperaturaComponent, InfoPacienteComponent, BatimentosComponent],
+  declarations: [
+    MonitoramentoComponent, 
+    PressaoComponent, 
+    TemperaturaComponent, 
+    InfoPacienteComponent, 
+    BatimentosComponent, 
+    CaixaDialogoComponent
+  ],
   imports: [
+    NegocioModule,
+    FormsModule,
     CommonModule,
     MatCardModule,
+    MatDialogModule,
+    MatSelectModule,
     RouterModule.forChild([
       {
         path: 'monitoramento',
         component: MonitoramentoComponent
       }
     ])
+  ],
+  entryComponents: [
+    CaixaDialogoComponent
   ]
 })
 export class MonitoramentoModule { }

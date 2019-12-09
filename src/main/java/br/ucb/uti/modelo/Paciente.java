@@ -1,5 +1,6 @@
 package br.ucb.uti.modelo;
 
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
@@ -26,4 +27,8 @@ public class Paciente extends Pessoa {
             cascade = CascadeType.ALL,
             orphanRemoval = true)
     private EstadoPaciente estadoPaciente;
+	
+	@OneToOne(mappedBy = "paciente")
+	@JsonbTransient
+	private Monitoramento monitoramento;
 }

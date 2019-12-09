@@ -1,0 +1,15 @@
+<form>
+  <h1 mat-dialog-title>Seleção de terminal</h1>
+  <div mat-dialog-content>
+    <mat-form-field>
+      <mat-select [(ngModel)]="terminalSelecionado" name="terminal">
+        <mat-option *ngFor="let ter of terminais"  [value]="ter.identificador">
+          {{ter.nome}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button [mat-dialog-close]="terminalSelecionado" cdkFocusInitial>Ok</button>
+  </div>
+</form>

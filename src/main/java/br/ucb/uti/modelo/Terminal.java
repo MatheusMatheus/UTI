@@ -3,6 +3,7 @@ package br.ucb.uti.modelo;
 import java.time.LocalDate;
 
 import javax.json.bind.annotation.JsonbDateFormat;
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -10,7 +11,6 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
-import javax.validation.constraints.NotNull;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -28,6 +28,7 @@ public class Terminal {
 
     @Id
     @GeneratedValue
+    @Column(updatable = false, nullable = false)
     private Integer identificador;
 
     @Column(nullable = false)
@@ -44,7 +45,7 @@ public class Terminal {
     @Column(nullable = false)
     private StatusTerminal statusTerminal;
     
-    @OneToOne
-    @NotNull
-    private Paciente paciente;
+    @OneToOne(mappedBy = "terminal")
+    @JsonbTransient
+    private Monitoramento monitoramento;
 }

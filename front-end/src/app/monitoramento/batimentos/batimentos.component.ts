@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { Monitoramento } from 'src/app/negocio/dominio/monitoramento';
+import { BehaviorSubject } from 'rxjs';
 
 declare var Chart: any
 
@@ -7,13 +9,14 @@ declare var Chart: any
   templateUrl: './batimentos.component.html',
   styleUrls: ['./batimentos.component.css']
 })
-export class BatimentosComponent {
+export class BatimentosComponent{
   myLineChart;
   labels;
   animationStep;
   ANIMATIONSTEPS = 200;
+ 
 
-  constructor() { }
+
 /*
   ngOnInit() {
 

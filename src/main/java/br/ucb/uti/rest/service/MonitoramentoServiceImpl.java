@@ -1,15 +1,15 @@
 package br.ucb.uti.rest.service;
 
-import java.util.List;
-
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.persistence.NoResultException;
 import javax.ws.rs.core.Response;
 
 import br.ucb.uti.modelo.Monitoramento;
+import br.ucb.uti.modelo.Paciente;
 import br.ucb.uti.modelo.Terminal;
 import br.ucb.uti.modelo.dao.MonitoramentoDAO;
+import br.ucb.uti.modelo.dao.PacienteDAO;
 import br.ucb.uti.modelo.dao.TerminalDAO;
 import br.ucb.uti.rest.service.api.MonitoramentoService;
 import br.ucb.uti.rest.service.requisicoes.MonitoramentoDTO;
@@ -22,12 +22,16 @@ public class MonitoramentoServiceImpl implements MonitoramentoService {
 
 	@Inject
 	private TerminalDAO terminalDAO;
+	
+	@Inject
+	private PacienteDAO pacienteDAO;
 
 	@Override
-	public Response associaPaciente(MonitoramentoDTO monitoramentoDTO) {
+	public Response monitora(MonitoramentoDTO monitoramentoDTO) {
 		try {
 			Terminal terminal = terminalDAO.findById(monitoramentoDTO.getTerminal().getIdentificador());
-			if (terminal == null) {
+			Paciente paciente = pacienteDAO.findById(monitoramentoDTO.getPaciente().getCpf());
+			if (terminal == null || paciente == null) {
 				throw new NoResultException();
 			}
 
@@ -36,6 +40,7 @@ public class MonitoramentoServiceImpl implements MonitoramentoService {
 					.pressaoConsultada(monitoramentoDTO.getPressaoConsultada())
 					.temperaturaConsultada(monitoramentoDTO.getTemperaturaConsultada())
 					.terminal(terminal)
+					.paciente(paciente)
 					.build();
 
 			monitoraDAO.insert(monitoramento);
@@ -47,11 +52,9 @@ public class MonitoramentoServiceImpl implements MonitoramentoService {
 	}
 
 	@Override
-	public Response monitora(String id) {
+	public Response associaPaciente(Integer id) {
 		try {
-			List<Monitoramento> monitoramentos = monitoraDAO.findAll();
-			return Response.ok().entity(monitoraDAO.findPacienteId(id)).build();
-
+			return Response.ok().entity(monitoraDAO.findByTerminalId(id)).build();
 		} catch (Exception e) {
 			return Response.notModified().build();
 		}

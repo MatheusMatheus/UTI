@@ -10,9 +10,9 @@ public class MonitoramentoDAO extends DAOImpl<Monitoramento> implements DAO<Moni
 		super(Monitoramento.class);
 	}
 
-	public Monitoramento findPacienteId(String cpf) {
-		TypedQuery<Monitoramento> query = manager.createNamedQuery("Monitoramento.findPacienteId", Monitoramento.class);
-		query.setParameter("pacienteID", cpf);
+	public Monitoramento findByTerminalId(Integer terminalID) {
+		TypedQuery<Monitoramento> query = manager.createNamedQuery("Monitoramento.findByTerminalId", Monitoramento.class);
+		query.setParameter("terminalID", terminalID);
 		return query.getSingleResult();
 	}
 }

@@ -21,7 +21,5 @@ public class TerminalDTO {
     private LocalDate dataCadastro;
 
     private StatusTerminal statusTerminal;
-    
-    private PacienteDTO paciente;
-	
+  	
 }

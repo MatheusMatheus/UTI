@@ -1,14 +1,14 @@
 
 <div class = "monitoramento">
         <div class = "horario">
-                <p>01/12/2019&nbsp;&nbsp;&nbsp;&nbsp; 00:00</p>
+                <p>{{dataAtual}}</p>
         </div>
         
         <div class="container">
                 <app-batimentos></app-batimentos>
-                <app-pressao></app-pressao>
-                <app-temperatura></app-temperatura>
-                <div class = "footer">Terminal 2469</div>
+                <app-pressao [monitoramento]="monitoramento"></app-pressao>
+                <app-temperatura [monitoramento]="monitoramento"></app-temperatura>
+                <div class = "footer" *ngIf="monitoramento">Terminal {{monitoramento.terminal.identificador}}</div>
         </div>   
 
         

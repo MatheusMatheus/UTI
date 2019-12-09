@@ -1,13 +1,13 @@
 <div class="pressao">
     <h5 class="mmHG">mmHG</h5>   
     <div class = "numPressao">        
-            <span class = "sistolica">120</span>
-            <span class = "diastolica">80</span>
+            <span class = "sistolica" *ngIf="monitoramento">{{monitoramento.pressaoConsultada.sistolica}}</span>
+            <span class = "diastolica" *ngIf="monitoramento">{{monitoramento.pressaoConsultada.diastolica}}</span>
         </div> 
 
     <div class="mini-pressao">
-            <span class="mini-sistolica">120</span>   
-            <span class="mini-diastolica">80</span>
+            <span class="mini-sistolica" *ngIf="miniPressao">{{miniPressao.sistolica}}</span>   
+            <span class="mini-diastolica" *ngIf="miniPressao">{{miniPressao.diastolica}}</span>
     </div>
 
     <div class="horario">
