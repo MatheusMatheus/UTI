@@ -1,7 +1,6 @@
 import { Component, OnInit, OnChanges, Input, SimpleChanges } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Monitoramento } from 'src/app/negocio/dominio/monitoramento';
-import { MomentoConsulta } from 'src/app/negocio/dominio/momentoConsulta';
 import { Pressao } from 'src/app/negocio/dominio/pressao';
 
 @Component({

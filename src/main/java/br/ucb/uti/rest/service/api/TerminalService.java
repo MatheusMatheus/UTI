@@ -20,6 +20,10 @@ public interface TerminalService{
     @GET
     @Path("todos")
     Response getTerminais();
+    
+    @GET
+    @Path("status/{status}")
+    Response getByStatus(@PathParam("status") String status);
 
     @GET
     @Path("{id}")

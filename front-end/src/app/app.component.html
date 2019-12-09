@@ -11,6 +11,11 @@
      #clienteAtivo="routerLinkActive"
      [ngClass]="{'active': clienteAtivo.isActive}"
   >Paciente</a>
+  <a routerLink="/crud/conta"
+  routerLinkActive
+  #contaAtiva="routerLinkActive"
+  [ngClass]="{'active': contaAtiva.isActive}"
+>Contas</a>
 </div>
 
 

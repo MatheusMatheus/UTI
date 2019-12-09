@@ -5,9 +5,13 @@ import { FormsModule } from '@angular/forms';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { MatButtonModule, MatSlideToggleModule, MatCardModule, MatInputModule, MatFormFieldModule, MatSelectModule, MAT_LABEL_GLOBAL_OPTIONS } from '@angular/material';
 import { NegocioModule } from '../negocio/negocio.module';
+import { ListagemTerminaisComponent } from './listagem-terminais/listagem-terminais.component';
 
 @NgModule({
-  declarations: [CadastroComponent],
+  declarations: [
+    CadastroComponent, 
+    ListagemTerminaisComponent
+  ],
   providers: [
     {provide: MAT_LABEL_GLOBAL_OPTIONS, useValue: {float: 'always'}}
   ],

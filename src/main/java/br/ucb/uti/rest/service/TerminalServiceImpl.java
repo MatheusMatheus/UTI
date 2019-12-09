@@ -5,6 +5,7 @@ import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.ws.rs.core.Response;
 
+import br.ucb.uti.modelo.StatusTerminal;
 import br.ucb.uti.modelo.Terminal;
 import br.ucb.uti.modelo.dao.TerminalDAO;
 import br.ucb.uti.rest.service.api.TerminalService;
@@ -51,4 +52,14 @@ public class TerminalServiceImpl implements TerminalService {
             return Response.notModified().build();
         }
     }
+
+	@Override
+	public Response getByStatus(String status) {
+        try {
+        	StatusTerminal statusTerminal = StatusTerminal.valueOf(status.toUpperCase());
+            return Response.ok().entity(terminalDAO.getByStatus(statusTerminal)).build();
+        } catch (Exception e) {
+            return Response.notModified().build();
+        }
+	}
 }

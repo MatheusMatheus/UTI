@@ -15,12 +15,12 @@ import br.ucb.uti.rest.service.requisicoes.MonitoramentoDTO;
 @Consumes("application/json")
 public interface MonitoramentoService {
 	
-    @GET
-    @Path("terminal/{id}")
-    Response associaPaciente(@PathParam("id") Integer id);
-    
     @POST
     @Path("associa-paciente")
-    Response monitora(MonitoramentoDTO monitoramentoDTO);
+    Response associaPaciente(MonitoramentoDTO monitoramentoDTO);
+    
+    @GET
+    @Path("terminal/{id}")
+    Response monitora(@PathParam("id") Integer id);
     
 }

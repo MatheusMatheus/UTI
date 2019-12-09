@@ -3,7 +3,6 @@ import { environment } from 'src/environments/environment';
 import { Terminal } from '../dominio/terminal';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import {map} from 'rxjs/internal/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +22,12 @@ export class TerminalService {
 
   buscaTodos(): Observable<Array<Terminal>> {
     let url = environment.baseURL + '/terminal/todos';
+
+    return this.httpClient.get<Array<Terminal>>(url);
+  }
+
+  buscaTerminaisAtivos() : Observable<Array<Terminal>> {
+    let url = environment.baseURL + '/terminal/ativos';
 
     return this.httpClient.get<Array<Terminal>>(url);
   }

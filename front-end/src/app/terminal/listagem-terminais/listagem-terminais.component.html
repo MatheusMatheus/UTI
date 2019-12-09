@@ -1,0 +1,30 @@
+<fieldset>
+  <legend>Terminais</legend>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Identificador</th>
+        <th>Nome</th>
+        <th>Data de Cadastro</th>
+        <th>Status</th>
+        <th>Endereço MAC</th>
+        <th>Editar</th>
+      </tr>
+
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let ter of terminais">
+        <td>{{ter.identificador}}</td>
+        <td>{{ter.nome}}</td>
+        <td>{{ter.dataCadastro}}</td>
+        <td>{{ter.statusTerminal}}</td>
+        <td>{{ter.mac}}</td>
+        <td class = "editar" (click)="seleciona(ter)"><a>Editar</a></td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</fieldset>

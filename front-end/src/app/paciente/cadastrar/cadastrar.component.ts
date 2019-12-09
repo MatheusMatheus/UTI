@@ -18,6 +18,7 @@ export class CadastrarComponent implements OnInit {
 
   paciente: Paciente;
   terminais: Terminal[];
+
   constructor(
     public pacienteService: PacienteService,
     public terminalService: TerminalService
@@ -45,11 +46,12 @@ export class CadastrarComponent implements OnInit {
     await this.pacienteService.cadastrar(this.paciente).toPromise();
   }
 
-  async buscaTerminais() {
-    await this.terminalService.buscaTodos();
+  async ngOnInit() {
+    this.terminais = await this.terminalService.buscaTerminaisAtivos().toPromise();
   }
 
-  ngOnInit() {
+  haTerminais() : boolean {
+    return this.terminais === null || this.terminais.length === 0;
   }
 
 }

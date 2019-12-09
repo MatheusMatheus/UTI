@@ -1,6 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { Terminal, StatusTerminal } from 'src/app/negocio/dominio/terminal';
 import { TerminalService } from 'src/app/negocio/service/terminal.service';
+import { EventEmitter } from 'events';
 
 @Component({
   selector: 'app-cadastro',
@@ -11,6 +12,7 @@ export class CadastroComponent implements OnInit {
 
   terminal: Terminal;
   private _original: Terminal;
+  @Output() novoTerminal = new EventEmitter();
 
   constructor(private terminalService: TerminalService) {
     this.terminal = new Terminal(
@@ -36,8 +38,6 @@ export class CadastroComponent implements OnInit {
   }
 
   async cadastrar() {
-    console.log(this.terminal);
     await this.terminalService.cadastrar(this.terminal).toPromise();
-  }
-
+  } 
 }

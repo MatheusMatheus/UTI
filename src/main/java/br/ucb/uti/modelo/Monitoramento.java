@@ -28,7 +28,8 @@ import lombok.Setter;
 @NamedQueries({
 	@NamedQuery(
 			name = "Monitoramento.findByTerminalId", 
-			query = "SELECT m from Monitoramento m where m.terminal.identificador = :terminalID")
+			query = "SELECT m from Monitoramento m where m.terminal.identificador = :terminalID  "
+					+ "and m.terminal.statusTerminal = :status")
 })
 public class Monitoramento {
 	
