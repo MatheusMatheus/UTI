@@ -62,61 +62,71 @@
           <mat-toolbar-row>
             <mat-form-field class="item-lado">
               <label>Temperatura Atual</label>
-              <input matInput autocomplete="off" name="nome" [(ngModel)]="paciente.estadoPaciente.temperaturaAtual"
-                required maxlength="150" #modelNome="ngModel" />
+              <input matInput autocomplete="off" name="tempAtual" 
+              [(ngModel)]="paciente.estadoPaciente.temperaturaAtual"
+                required #modelNome="ngModel" />
             </mat-form-field>
 
             <mat-form-field>
               <label>Temperatura Mínima</label>
-              <input matInput autocomplete="off" name="nome" [(ngModel)]="paciente.estadoPaciente.temperaturaMinima"
-                required maxlength="150" #modelNome="ngModel" />
+              <input matInput autocomplete="off" name="tempMinima"
+                [(ngModel)]="paciente.estadoPaciente.temperaturaMinima" required #modelNome="ngModel" />
             </mat-form-field>
 
             <mat-form-field class="item-lado">
               <label>Temperatura Máxima</label>
-              <input matInput autocomplete="off" name="nome" [(ngModel)]="paciente.estadoPaciente.temperaturaMaxima"
-                required maxlength="150" #modelNome="ngModel" />
+              <input matInput autocomplete="off" name="tempMaxima"
+                [(ngModel)]="paciente.estadoPaciente.temperaturaMaxima" required #modelNome="ngModel" />
             </mat-form-field>
           </mat-toolbar-row>
 
           <mat-toolbar-row>
             <mat-form-field class="item-lado">
               <label>Pressão Sistólica Atual</label>
-              <input matInput autocomplete="off" name="cpf" [(ngModel)]="paciente.cpf" required minlength="11"
-                maxlength="11" #modelNome="ngModel" />
+              <input matInput autocomplete="off" name="pressaoSistolicaAtual"
+                [(ngModel)]="paciente.estadoPaciente.pressaoAtual.sistolica" required
+                #modelNome="ngModel" />
             </mat-form-field>
 
             <mat-form-field class="item-lado">
               <label>Pressão Disatólica Atual</label>
-              <input matInput autocomplete="off" name="cpf" [(ngModel)]="paciente.cpf" required minlength="11"
-                maxlength="11" #modelNome="ngModel" />
+              <input matInput autocomplete="off" name="pressaoDiastolicaAtual" 
+              [(ngModel)]="paciente.estadoPaciente.pressaoAtual.diastolica" required
+              #modelNome="ngModel" />
             </mat-form-field>
           </mat-toolbar-row>
 
           <mat-toolbar-row>
             <mat-form-field class="item-lado">
               <label>Pressão Sistólica Mímina</label>
-              <input matInput autocomplete="off" name="cpf" [(ngModel)]="paciente.cpf" required minlength="11"
-                maxlength="11" #modelNome="ngModel" />
+              <input matInput autocomplete="off" name="pressaoSistolicaMinima" 
+              [(ngModel)]="paciente.estadoPaciente.pressaoMinima.sistolica" required
+               #modelNome="ngModel" />
             </mat-form-field>
 
             <mat-form-field class="item-lado">
-              <label>Pressão Disatólica Màxima</label>
-              <input matInput autocomplete="off" name="cpf" [(ngModel)]="paciente.cpf" required minlength="11"
-                maxlength="11" #modelNome="ngModel" />
+              <label>Pressão Disatólica Mímina</label>
+              <input matInput autocomplete="off" name="pressaoDiastolicaMinima" 
+              [(ngModel)]="paciente.estadoPaciente.pressaoMinima.diastolica" required
+                #modelNome="ngModel" />
             </mat-form-field>
           </mat-toolbar-row>
 
-          <mat-toolbar-row *ngIf="haTerminais()">
-              <mat-form-field class="item">
-                  <label>Selecione um terminal</label>
-                <mat-select name="terminais">
-                  <mat-option *ngFor="let ter of terminais" [value]="ter.identificador">
-                    {{ter.nome}}
-                  </mat-option>
-                </mat-select>
+          <mat-toolbar-row>
+              <mat-form-field class="item-lado">
+                <label>Pressão Sistólica Máxima</label>
+                <input matInput autocomplete="off" name="pressaoSistolicaMaxima" 
+                [(ngModel)]="paciente.estadoPaciente.pressaoMaxima.sistolica" required
+                #modelNome="ngModel" />
               </mat-form-field>
-            </mat-toolbar-row>
+  
+              <mat-form-field class="item-lado">
+                <label>Pressão Disatólica Máxima</label>
+                <input matInput autocomplete="off" name="pressaoDiastolicaMaxima" 
+                [(ngModel)]="paciente.estadoPaciente.pressaoMaxima.diastolica" required
+                #modelNome="ngModel" />
+              </mat-form-field>
+            </mat-toolbar-row>          
         </mat-toolbar>
       </div>
     </div>

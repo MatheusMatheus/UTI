@@ -23,6 +23,15 @@ public class PacienteServiceImpl implements PacienteService {
             return Response.notModified().build();
         }
     }
+    
+	@Override
+	public Response getPacientesNaoMonitorados() {
+        try {
+            return Response.ok().entity(pacienteDAO.findNaoMonitorados()).build();
+        } catch (Exception e) {
+            return Response.notModified().build();
+        }
+	}
 
     @Override
     public Response getPaciente(Integer id) {

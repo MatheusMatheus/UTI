@@ -6,9 +6,9 @@
         
         <div class="container">
                 <app-batimentos></app-batimentos>
-                <app-pressao [monitoramento]="monitoramento"></app-pressao>
-                <app-temperatura [monitoramento]="monitoramento"></app-temperatura>
-                <div class = "footer" *ngIf="monitoramento">Terminal {{monitoramento.terminal.identificador}}</div>
+                <app-pressao [monitoramento]="monitoramento" (atributoAlterado)="atributoAlterou($event)"></app-pressao>
+                <app-temperatura [monitoramento]="monitoramento" (atributoAlterado)="atributoAlterou($event)"></app-temperatura>
+                <div class = "footer" *ngIf="monitoramento.terminal">Terminal {{monitoramento.terminal.identificador}}</div>
         </div>   
 
         

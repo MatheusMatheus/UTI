@@ -10,22 +10,14 @@ import { Paciente } from 'src/app/negocio/dominio/paciente';
 })
 export class CaixaDialogoComponent implements OnInit {
 
-  terminalPacienteSelecionados: TerminalPacienteSelecionados;
-
+  terminal: Terminal;
   constructor(
     public dialogRef: MatDialogRef<CaixaDialogoComponent>,
-    @Optional() @Inject(MAT_DIALOG_DATA) public data: {terminais, pacientes},
+    @Optional() @Inject(MAT_DIALOG_DATA) public data: {terminal},
   ) { }
 
   ngOnInit() {
-    this.terminalPacienteSelecionados = {
-      pacienteSelecionado: Paciente.criaPaciente(),
-      terminalSelecionado: Terminal.criaTerminal()
-    }
+    this.terminal = this.data.terminal;
   }
 }
 
-export interface TerminalPacienteSelecionados {
-  terminalSelecionado: Terminal;
-  pacienteSelecionado: Paciente;
-}

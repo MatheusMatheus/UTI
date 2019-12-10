@@ -2,11 +2,11 @@
     <h2 class="c">C</h2>   
 
     <div class="temp">
-            <span class="numTemp" *ngIf="monitoramento">{{monitoramento.temperaturaConsultada}}</span>  
+            <span class="numTemp" *ngIf="isAvailable()">{{atributoMonitoravel.temperatura}}</span>  
     </div>
 
     <div class="temps">
-        <span class="temp1" *ngIf="monitoramento" >{{monitoramento.temperaturaConsultada}}</span>   
+        <span class="temp1" *ngIf="isAvailable()" >{{monitoramento.temperaturaConsultada}}</span>   
         <span class="temp2">{{miniTemp}}</span>        
     </div>
 </div>

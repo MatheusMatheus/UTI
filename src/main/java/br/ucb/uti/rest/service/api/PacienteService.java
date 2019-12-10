@@ -18,6 +18,11 @@ public interface PacienteService {
     @GET
     @Path("todos")
     Response getPacientes();
+    
+    @GET
+    @Path("nao-monitorados")
+    Response getPacientesNaoMonitorados();
+
 
     @GET
     @Path("{id}")

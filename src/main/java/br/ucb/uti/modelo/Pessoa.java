@@ -1,11 +1,18 @@
 package br.ucb.uti.modelo;
 
-import lombok.*;
-
-import javax.json.bind.annotation.JsonbProperty;
-import javax.persistence.*;
-import javax.validation.constraints.Min;
+import javax.persistence.Column;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.validation.constraints.Size;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 @AllArgsConstructor
 @NoArgsConstructor

@@ -10,6 +10,8 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 
 import lombok.AllArgsConstructor;
@@ -24,6 +26,16 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
+@NamedQueries({
+	@NamedQuery(
+			name = "Terminal.findLivres", 
+			query = "SELECT t from Terminal t where t.monitoramento = null "
+					+ "and t.statusTerminal = :status"),
+	@NamedQuery(
+			name = "Terminal.findVinculos", 
+			query = "SELECT t from Terminal t where t.monitoramento = null "
+					+ "and t.statusTerminal = :status")
+})
 public class Terminal {
 
     @Id
@@ -45,7 +57,7 @@ public class Terminal {
     @Column(nullable = false)
     private StatusTerminal statusTerminal;
     
-    @OneToOne(mappedBy = "terminal")
+    @OneToOne
     @JsonbTransient
     private Monitoramento monitoramento;
 }

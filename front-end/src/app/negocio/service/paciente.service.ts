@@ -15,8 +15,15 @@ export class PacienteService {
   }
 
   cadastrar(paciente: Paciente): Observable<any> {
-    let url = `${environment.baseURL}/paciente/novo`;
+    let url = `${environment.baseURL}/paciente/cadastrar`;
 
     return this.httpClient.post(url, paciente);
+  }
+
+
+  buscaPacientesNaoMonitorados(): Observable<Array<Paciente>> {
+    let url = environment.baseURL + '/paciente/nao-monitorados';
+
+    return this.httpClient.get<Array<Paciente>>(url);
   }
 }

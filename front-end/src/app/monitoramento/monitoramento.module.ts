@@ -10,6 +10,7 @@ import { BatimentosComponent } from './batimentos/batimentos.component';
 import { NegocioModule } from '../negocio/negocio.module';
 import { CaixaDialogoComponent } from './caixa-dialogo/caixa-dialogo.component';
 import { FormsModule } from '@angular/forms';
+import { AtributoMonitoravelComponent } from './atributo-monitoravel/atributo-monitoravel.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     TemperaturaComponent, 
     InfoPacienteComponent, 
     BatimentosComponent, 
-    CaixaDialogoComponent
+    CaixaDialogoComponent, 
+    AtributoMonitoravelComponent
   ],
   imports: [
     NegocioModule,

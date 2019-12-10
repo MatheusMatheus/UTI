@@ -5,7 +5,7 @@ import { Endereco } from '../../negocio/dominio/endereco';
 import { Contato } from '../../negocio/dominio/contato';
 import { Paciente } from '../../negocio/dominio/paciente';
 import { PacienteService } from 'src/app/negocio/service/paciente.service';
-import { Terminal } from 'src/app/negocio/dominio/terminal';
+import { Terminal, StatusTerminal } from 'src/app/negocio/dominio/terminal';
 import { TerminalService } from 'src/app/negocio/service/terminal.service';
 
 
@@ -17,7 +17,6 @@ import { TerminalService } from 'src/app/negocio/service/terminal.service';
 export class CadastrarComponent implements OnInit {
 
   paciente: Paciente;
-  terminais: Terminal[];
 
   constructor(
     public pacienteService: PacienteService,
@@ -47,11 +46,6 @@ export class CadastrarComponent implements OnInit {
   }
 
   async ngOnInit() {
-    this.terminais = await this.terminalService.buscaTerminaisAtivos().toPromise();
+    
   }
-
-  haTerminais() : boolean {
-    return this.terminais === null || this.terminais.length === 0;
-  }
-
 }

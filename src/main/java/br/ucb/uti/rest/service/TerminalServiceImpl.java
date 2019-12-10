@@ -26,6 +26,16 @@ public class TerminalServiceImpl implements TerminalService {
             return Response.notModified().build();
         }
     }
+    
+	@Override
+	public Response getTerminaisLivres() {
+        try {
+            return Response.ok().entity(terminalDAO.findLivres()).build();
+
+        } catch (Exception e) {
+            return Response.notModified().build();
+        }
+	}
 
     @Override
     public Response getTerminal(Integer id) {
@@ -58,6 +68,15 @@ public class TerminalServiceImpl implements TerminalService {
         try {
         	StatusTerminal statusTerminal = StatusTerminal.valueOf(status.toUpperCase());
             return Response.ok().entity(terminalDAO.getByStatus(statusTerminal)).build();
+        } catch (Exception e) {
+            return Response.notModified().build();
+        }
+	}
+
+	@Override
+	public Response desvincula(Integer id) {
+        try {
+            return Response.ok().entity(terminalDAO.desvincula(id)).build();
         } catch (Exception e) {
             return Response.notModified().build();
         }

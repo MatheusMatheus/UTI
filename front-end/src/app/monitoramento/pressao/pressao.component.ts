@@ -1,43 +1,38 @@
-import { Component, OnInit, OnChanges, Input, SimpleChanges } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
-import { Monitoramento } from 'src/app/negocio/dominio/monitoramento';
+import { Component, OnInit, Input } from '@angular/core';
 import { Pressao } from 'src/app/negocio/dominio/pressao';
+import { Monitoramento } from 'src/app/negocio/dominio/monitoramento';
+import { AtributoMonitoravelComponent } from '../atributo-monitoravel/atributo-monitoravel.component';
 
 @Component({
   selector: 'app-pressao',
   templateUrl: './pressao.component.html',
   styleUrls: ['./pressao.component.css']
 })
-export class PressaoComponent implements OnInit, OnChanges {
+export class PressaoComponent extends AtributoMonitoravelComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    super();
+  }
 
-  private _monitoramento = new BehaviorSubject<Monitoramento>(null);
+  @Input() monitoramento: Monitoramento;
+  novaPressao = new Pressao(0, 0);
+
   miniPressao: Pressao = new Pressao(0, 0);
 
-  @Input() 
-  set monitoramento(valor) {
-    this._monitoramento.next(valor);
+  async ngOnInit() {
+    super.ngOnInit();
+    setInterval(() => {
+      this.miniPressao.sistolica = this.alteraAtributo(130, 170);
+      this.miniPressao.diastolica = this.alteraAtributo(90, 110);
+    }, 5000);    
   }
 
-  get monitoramento() {
-    return this._monitoramento.getValue();
-  }
-
-  ngOnInit() {
-    setInterval(() => this.monitoramento.pressaoConsultada.sistolica = this.alteraPressao(120, 180), 5000);
-    setInterval(() => this.monitoramento.pressaoConsultada.diastolica = this.alteraPressao(80, 120), 5000);
-
-    setInterval(() => this.miniPressao.sistolica = this.alteraPressao(130, 170), 5000);
-    setInterval(() => this.miniPressao.diastolica = this.alteraPressao(90, 110), 5000);
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log(this.monitoramento);
-  }
-
-  alteraPressao(min: number, max: number) {
+  alteraAtributo(min: number, max: number) {
     return Math.floor(Math.random() * (max - min)) + min; 
+  }
+
+  isAvailable(): boolean {
+    return this.monitoramento.paciente !== null && this.monitoramento.terminal !== null;
   }
 
 }

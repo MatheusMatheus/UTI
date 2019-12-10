@@ -7,9 +7,9 @@ import javax.persistence.AttributeOverride;
 import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
 import javax.persistence.Embedded;
-import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
@@ -28,20 +28,19 @@ import lombok.Setter;
 @NamedQueries({
 	@NamedQuery(
 			name = "Monitoramento.findByTerminalId", 
-			query = "SELECT m from Monitoramento m where m.terminal.identificador = :terminalID  "
-					+ "and m.terminal.statusTerminal = :status")
+			query = "SELECT m from Monitoramento m "
+					+ "where m.terminal.statusTerminal = :status")
 })
 public class Monitoramento {
 	
-	@EmbeddedId
-	private MonitoramentoId id;
+	@Id
+	@GeneratedValue
+	private Integer id;
 
-    @OneToOne
-    @JoinColumn(name = "fk_terminal", insertable = false, updatable = false)
+	@OneToOne
     private Terminal terminal;
     
     @OneToOne
-    @JoinColumn(name = "fk_paciente", insertable = false, updatable = false)
     private Paciente paciente;
     
     @JsonbDateFormat(value = "dd/MM/yyyy HH:mm:ss")
@@ -61,8 +60,6 @@ public class Monitoramento {
     @Builder
 	public Monitoramento(Terminal terminal, Paciente paciente, LocalDateTime momentoConsulta, Pressao pressaoConsultada,
 			double temperaturaConsultada) {
-    	// Cria a chave primária
-    	this.id = new MonitoramentoId(paciente.getCpf(), terminal.getIdentificador());
 
 		this.terminal = terminal;
 		this.paciente = paciente;

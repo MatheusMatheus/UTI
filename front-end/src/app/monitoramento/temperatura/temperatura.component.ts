@@ -1,42 +1,36 @@
-import { Component, OnInit, OnChanges, SimpleChanges, Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Monitoramento } from 'src/app/negocio/dominio/monitoramento';
-import { BehaviorSubject } from 'rxjs';
-import { MomentoConsulta } from 'src/app/negocio/dominio/momentoConsulta';
+import { AtributoMonitoravelComponent } from '../atributo-monitoravel/atributo-monitoravel.component';
 
 @Component({
   selector: 'app-temperatura',
   templateUrl: './temperatura.component.html',
   styleUrls: ['./temperatura.component.css']
 })
-export class TemperaturaComponent implements OnInit, OnChanges {
+export class TemperaturaComponent extends AtributoMonitoravelComponent implements OnInit {
 
-  constructor() { }
-
-  private _monitoramento = new BehaviorSubject<Monitoramento>(null);
-
-  miniTemp;
-
-  @Input() 
-  set monitoramento(valor) {
-    this._monitoramento.next(valor);
+  constructor() { 
+    super();
   }
 
-  get monitoramento() {
-    return this._monitoramento.getValue();
-  }
+  @Input() monitoramento: Monitoramento;
+  temperaturaConsultada: number;
+  miniTemp: number;
 
   ngOnInit() {
-    setInterval(() => this.monitoramento.temperaturaConsultada = this.alteraTemeperatura(35, 45), 5000);
-    setInterval(() => this.miniTemp = this.alteraTemeperatura(37, 42), 5000);
+    super.ngOnInit();
+    setInterval(() => {
+      this.miniTemp = this.alteraAtributo(37, 42);
+    }, 5000);
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log(this.monitoramento);
-  }
-
-  alteraTemeperatura(min, max): number {
+  alteraAtributo(min, max): number {
     let n = Math.random() * (max - min) + min; 
     return Number(n.toFixed(1));
+  }
+
+  isAvailable(): boolean {
+    return this.monitoramento.paciente !== null && this.monitoramento.terminal !== null;
   }
   
 }

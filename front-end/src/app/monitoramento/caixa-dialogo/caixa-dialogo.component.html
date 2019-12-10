@@ -1,15 +1,28 @@
 <form>
-  <h1 mat-dialog-title>Seleção de terminal</h1>
+  <h1 mat-dialog-title>Monitoramento de Paciente</h1>
   <div mat-dialog-content>
     <mat-form-field>
-      <mat-select [(ngModel)]="terminalSelecionado" name="terminal">
-        <mat-option *ngFor="let ter of terminais"  [value]="ter.identificador">
+        <mat-label>Selecione um terminal</mat-label>
+      <mat-select 
+      [(ngModel)]="terminalPacienteSelecionados.terminalSelecionado" 
+      name="terminal" required>
+        <mat-option *ngFor="let ter of data.terminais" [value]="ter">
           {{ter.nome}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Selecione um paciente</mat-label>
+      <mat-select 
+      [(ngModel)]="terminalPacienteSelecionados.pacienteSelecionado" 
+      name="paciente" required>
+        <mat-option *ngFor="let paciente of data.pacientes" [value]="paciente">
+          {{paciente.nome}}
         </mat-option>
       </mat-select>
     </mat-form-field>
   </div>
   <div mat-dialog-actions>
-    <button mat-button [mat-dialog-close]="terminalSelecionado" cdkFocusInitial>Ok</button>
+    <button mat-button [mat-dialog-close]="terminalPacienteSelecionados" cdkFocusInitial>Ok</button>
   </div>
 </form>

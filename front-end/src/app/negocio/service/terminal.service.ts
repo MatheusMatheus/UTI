@@ -26,8 +26,8 @@ export class TerminalService {
     return this.httpClient.get<Array<Terminal>>(url);
   }
 
-  buscaTerminaisAtivos() : Observable<Array<Terminal>> {
-    let url = environment.baseURL + '/terminal/ativos';
+  buscaTerminaisLivres() : Observable<Array<Terminal>> {
+    let url = `${environment.baseURL}/terminal/livres`;
 
     return this.httpClient.get<Array<Terminal>>(url);
   }

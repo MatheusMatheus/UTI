@@ -13,8 +13,10 @@ export class MonitoramentoService {
     private httpClient: HttpClient
   ) { }
 
-  public monitora(terminalID: number): Observable<Monitoramento> {
-    let url = `${environment.baseURL}/monitoramento/terminal/${terminalID}`;
-    return this.httpClient.get<Monitoramento>(url);
+  public gravaMonitoramento(monitoramento: Monitoramento) : Observable<any> {
+    let url = `${environment.baseURL}/monitoramento/grava`;
+    console.log(url);
+    console.log(monitoramento)
+    return this.httpClient.post(url, monitoramento);
   }
 }
