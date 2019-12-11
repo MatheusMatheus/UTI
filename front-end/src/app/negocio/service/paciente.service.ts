@@ -20,6 +20,12 @@ export class PacienteService {
     return this.httpClient.post(url, paciente);
   }
 
+  buscaTodos() : Observable<any> {
+    let url = `${environment.baseURL}/paciente/todos`;
+
+    return this.httpClient.get(url);
+  }
+
 
   buscaPacientesNaoMonitorados(): Observable<Array<Paciente>> {
     let url = environment.baseURL + '/paciente/nao-monitorados';

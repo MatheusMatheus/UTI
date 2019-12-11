@@ -1,6 +1,7 @@
 package br.ucb.uti.modelo;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import javax.json.bind.annotation.JsonbDateFormat;
 import javax.json.bind.annotation.JsonbTransient;
@@ -10,9 +11,7 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -26,16 +25,6 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@NamedQueries({
-	@NamedQuery(
-			name = "Terminal.findLivres", 
-			query = "SELECT t from Terminal t where t.monitoramento = null "
-					+ "and t.statusTerminal = :status"),
-	@NamedQuery(
-			name = "Terminal.findVinculos", 
-			query = "SELECT t from Terminal t where t.monitoramento = null "
-					+ "and t.statusTerminal = :status")
-})
 public class Terminal {
 
     @Id
@@ -57,7 +46,7 @@ public class Terminal {
     @Column(nullable = false)
     private StatusTerminal statusTerminal;
     
-    @OneToOne
+    @OneToMany
     @JsonbTransient
-    private Monitoramento monitoramento;
+    private List<Monitoramento> monitoramentos;
 }

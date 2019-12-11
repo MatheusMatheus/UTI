@@ -31,8 +31,9 @@ export class PressaoComponent extends AtributoMonitoravelComponent implements On
     return Math.floor(Math.random() * (max - min)) + min; 
   }
 
-  isAvailable(): boolean {
-    return this.monitoramento.paciente !== null && this.monitoramento.terminal !== null;
+  isAvailable() {
+    return (this.monitoramento.paciente !== null && this.monitoramento.paciente.cpf !== "")
+    && (this.monitoramento.terminal !== null && this.monitoramento.terminal.mac !== "");
   }
 
 }

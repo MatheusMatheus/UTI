@@ -1,15 +1,18 @@
+<div class="monitoramento">
+  <div class="horario">
+    <p>{{dataAtual}}</p>
+    <button mat-raised-button (click)="novoMonitoramento()" class = "botao">Novo Monitoramento</button>
+    <button mat-raised-button (click)="escolherOutroTerminal()" class = "botao">Escolher outro Terminal</button>
+  </div>
+  <div class="container">
+   
+    <app-batimentos [monitoramento]="monitoramento" [msgAlerta]="msgAlerta"></app-batimentos>
+    <app-pressao [monitoramento]="monitoramento" (atributoAlterado)="atributoAlterou($event)"></app-pressao>
+    <app-temperatura [monitoramento]="monitoramento" (atributoAlterado)="atributoAlterou($event)"></app-temperatura>
+    <div class="footer" *ngIf="monitoramento.terminal">Terminal {{monitoramento.terminal.identificador}}</div>
+  </div>
 
-<div class = "monitoramento">
-        <div class = "horario">
-                <p>{{dataAtual}}</p>
-        </div>
-        
-        <div class="container">
-                <app-batimentos></app-batimentos>
-                <app-pressao [monitoramento]="monitoramento" (atributoAlterado)="atributoAlterou($event)"></app-pressao>
-                <app-temperatura [monitoramento]="monitoramento" (atributoAlterado)="atributoAlterou($event)"></app-temperatura>
-                <div class = "footer" *ngIf="monitoramento.terminal">Terminal {{monitoramento.terminal.identificador}}</div>
-        </div>   
 
-        
+
 </div>
+

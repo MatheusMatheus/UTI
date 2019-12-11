@@ -1,4 +1,4 @@
-#mycanvas {
+.container {
     border: 1px solid white;
     position: absolute;
     float: left;
@@ -6,4 +6,11 @@
     margin-top: 200px;
     min-width: 60%;
     min-height: 60%;
+    color: white;
+}
+
+h1 {
+    font-size: 3em;
+    color: red;
+    font-weight: bold;
 }

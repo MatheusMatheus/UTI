@@ -8,6 +8,7 @@ import extrasLocalePt from '@angular/common/locales/extra/pt';
 import {registerLocaleData} from '@angular/common';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppRoutingModule} from './app-routing.module';
+import { MatButtonModule, MatMenuModule } from '@angular/material';
 
 registerLocaleData(localePt, 'pt-BR', extrasLocalePt);
 
@@ -19,6 +20,8 @@ registerLocaleData(localePt, 'pt-BR', extrasLocalePt);
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    MatButtonModule,
+    MatMenuModule
   ],
   providers: [
     {

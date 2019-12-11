@@ -5,10 +5,10 @@ import java.sql.SQLException;
 import java.util.List;
 
 public interface DAO<T> {
-    void insert(T entidade) throws SQLException;
-    void update(T entidade) throws SQLException;
-    void delete(T entidade) throws SQLException;
-    List<T> findAll() throws SQLException;
-    T findById(Serializable id) throws SQLException;
+    void insere(T entidade) throws SQLException;
+    void atualiza(T entidade) throws SQLException;
+    void exclui(T entidade) throws SQLException;
+    List<T> buscaTodos() throws SQLException;
+    T buscaPorId(Serializable id) throws SQLException;
 
 }

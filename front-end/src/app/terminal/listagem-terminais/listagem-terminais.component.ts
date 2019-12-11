@@ -11,7 +11,11 @@ import { CaixaDialogoComponent } from '../caixa-dialogo/caixa-dialogo.component'
 })
 export class ListagemTerminaisComponent implements OnInit {
 
+  @Input()
   terminais: Array<Terminal>;
+
+  @Input()
+  msgTerminal: string;
 
   constructor(
     private terminalService: TerminalService,
@@ -19,10 +23,10 @@ export class ListagemTerminaisComponent implements OnInit {
   ) {}
 
   async ngOnInit() {
-    this.terminais = await this.terminalService.buscaTerminaisLivres().toPromise();
+   
   }
 
-  seleciona(terminal: Terminal) {
+  async seleciona(terminal: Terminal) {
     const dialogRef = this.dialog.open(CaixaDialogoComponent, {
       data: { terminal },
       width: '400px',
@@ -30,9 +34,8 @@ export class ListagemTerminaisComponent implements OnInit {
       autoFocus: true
     });
 
-    dialogRef.afterClosed().subscribe(resultado => {
-      
-    });
+    let resultado = await dialogRef.afterClosed().toPromise();
+    await this.terminalService.editar(resultado).toPromise();
   }
 }
 

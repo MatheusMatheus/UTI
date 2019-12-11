@@ -10,9 +10,9 @@ import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -32,20 +32,21 @@ import lombok.Setter;
 					+ "where m.terminal.statusTerminal = :status")
 })
 public class Monitoramento {
-	
+
 	@Id
 	@GeneratedValue
-	private Integer id;
+	private int id;
 
-	@OneToOne
+	@ManyToOne
     private Terminal terminal;
     
-    @OneToOne
+	@ManyToOne
     private Paciente paciente;
-    
+	
+	@Column(unique = true)
     @JsonbDateFormat(value = "dd/MM/yyyy HH:mm:ss")
     private LocalDateTime momentoConsulta;
-
+    
     @Embedded
     @AttributeOverrides(
             {
@@ -60,7 +61,7 @@ public class Monitoramento {
     @Builder
 	public Monitoramento(Terminal terminal, Paciente paciente, LocalDateTime momentoConsulta, Pressao pressaoConsultada,
 			double temperaturaConsultada) {
-
+    	
 		this.terminal = terminal;
 		this.paciente = paciente;
 		this.momentoConsulta = momentoConsulta;
@@ -68,7 +69,7 @@ public class Monitoramento {
 		this.temperaturaConsultada = temperaturaConsultada;
 
 		// Mantém a integridade referencial
-		this.terminal.setMonitoramento(this);
-		this.paciente.setMonitoramento(this);
+		terminal.getMonitoramentos().add(this);
+		paciente.getMonitoramentos().add(this);
     }
 }

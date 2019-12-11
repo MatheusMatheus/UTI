@@ -23,6 +23,14 @@ export class CaixaDialogoComponent implements OnInit {
       terminalSelecionado: Terminal.criaTerminal()
     }
   }
+
+  isTerminaisAvailable() {
+    return this.data.terminais !== null && this.data.terminais.length > 0;
+  }
+
+  isPacientesAvailable() {
+    return this.data.pacientes !== null && this.data.pacientes.length > 0;
+  }
 }
 
 export interface TerminalPacienteSelecionados {

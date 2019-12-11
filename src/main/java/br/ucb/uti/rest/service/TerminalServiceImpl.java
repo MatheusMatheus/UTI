@@ -20,7 +20,7 @@ public class TerminalServiceImpl implements TerminalService {
     @Override
     public Response getTerminais() {
         try {
-            return Response.ok().entity(terminalDAO.findAll()).build();
+            return Response.ok().entity(terminalDAO.buscaTodos()).build();
 
         } catch (Exception e) {
             return Response.notModified().build();
@@ -28,10 +28,28 @@ public class TerminalServiceImpl implements TerminalService {
     }
     
 	@Override
-	public Response getTerminaisLivres() {
+	public Response getTerminaisLivresParaMonitorar() {
         try {
-            return Response.ok().entity(terminalDAO.findLivres()).build();
+            return Response.ok().entity(terminalDAO.buscaLivresParaMonitorar()).build();
 
+        } catch (Exception e) {
+            return Response.notModified().build();
+        }
+	}
+	
+	@Override
+	public Response getTerminaisVinculados() {
+        try {
+            return Response.ok().entity(terminalDAO.buscaVinculados()).build();
+        } catch (Exception e) {
+            return Response.notModified().build();
+        }
+	}
+	
+	@Override
+	public Response getTerminaisDesvinculados() {
+        try {
+            return Response.ok().entity(terminalDAO.buscaDesvinculados()).build();
         } catch (Exception e) {
             return Response.notModified().build();
         }
@@ -40,7 +58,7 @@ public class TerminalServiceImpl implements TerminalService {
     @Override
     public Response getTerminal(Integer id) {
         try {
-            return Response.ok().entity(terminalDAO.findById(id)).build();
+            return Response.ok().entity(terminalDAO.buscaPorId(id)).build();
 
         } catch (Exception e) {
             return Response.notModified().build();
@@ -56,7 +74,7 @@ public class TerminalServiceImpl implements TerminalService {
         			.nome(terminalDTO.getNome())
         			.statusTerminal(terminalDTO.getStatusTerminal())
         			.build();
-            terminalDAO.insert(terminal);
+            terminalDAO.insere(terminal);
             return Response.noContent().status(Response.Status.ACCEPTED).build();
         } catch (Exception e) {
             return Response.notModified().build();
@@ -81,4 +99,19 @@ public class TerminalServiceImpl implements TerminalService {
             return Response.notModified().build();
         }
 	}
+
+	@Override
+	public Response editar(TerminalDTO terminalDTO) {
+        try {
+    		Terminal terminal = Terminal.builder()
+        			.nome(terminalDTO.getNome())
+        			.statusTerminal(terminalDTO.getStatusTerminal())
+        			.build();
+    		terminalDAO.atualizaTerminal(terminal);
+    		return Response.noContent().status(Response.Status.ACCEPTED).build();
+        } catch (Exception e) {
+            return Response.notModified().build();
+        }
+	}
+
 }

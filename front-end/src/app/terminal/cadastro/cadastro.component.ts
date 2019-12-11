@@ -11,8 +11,10 @@ import { EventEmitter } from 'events';
 export class CadastroComponent implements OnInit {
 
   terminal: Terminal;
-  private _original: Terminal;
-  @Output() novoTerminal = new EventEmitter();
+  terminaisVinculados: Terminal[];  
+  terminaisLivres: Terminal[];
+  msgLivres: string
+  msgVinculados: string;
 
   constructor(private terminalService: TerminalService) {
     this.terminal = new Terminal(
@@ -23,8 +25,11 @@ export class CadastroComponent implements OnInit {
     );
    }
 
-  ngOnInit() {
+  async ngOnInit() {
     this.terminal.mac = this.getMAC();
+    this.msgLivres = 'Terminais Livres para Monitoramento';
+    this.msgVinculados = 'Terminais Vinculados a um Paciente';
+    this.buscaTerminais();
   }
 
   private getDate(): string {
@@ -39,5 +44,11 @@ export class CadastroComponent implements OnInit {
 
   async cadastrar() {
     await this.terminalService.cadastrar(this.terminal).toPromise();
+    await this.buscaTerminais();
   } 
+
+  async buscaTerminais() {
+    this.terminaisVinculados = await this.terminalService.buscaTerminaisVinculados().toPromise();
+    this.terminaisLivres = await this.terminalService.buscaTerminaisLivres().toPromise();
+  }
 }

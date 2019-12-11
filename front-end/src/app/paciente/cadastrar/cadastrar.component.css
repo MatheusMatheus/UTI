@@ -60,12 +60,11 @@ label {
   border: 1px solid blue;
 }
 
-.bottom {
-  bottom: 150px;
-  position: absolute;
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto; 
-  width: 200px; 
+.actions {
+  left: 60px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50px;
+  width: 200px;
 }

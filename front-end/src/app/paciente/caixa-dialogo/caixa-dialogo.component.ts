@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject, Optional } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
-import { Terminal } from 'src/app/negocio/dominio/terminal';
+import { Paciente } from 'src/app/negocio/dominio/paciente';
 
 @Component({
   selector: 'app-caixa-dialogo',
@@ -9,14 +9,14 @@ import { Terminal } from 'src/app/negocio/dominio/terminal';
 })
 export class CaixaDialogoComponent implements OnInit {
 
-  terminal: Terminal;
+  paciente: Paciente;
   constructor(
     public dialogRef: MatDialogRef<CaixaDialogoComponent>,
-    @Optional() @Inject(MAT_DIALOG_DATA) public data: {terminal},
+    @Optional() @Inject(MAT_DIALOG_DATA) public data: {paciente},
   ) { }
 
   ngOnInit() {
-    this.terminal = this.data.terminal;
+    this.paciente = this.data.paciente;
   }
 }
 

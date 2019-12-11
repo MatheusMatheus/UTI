@@ -18,7 +18,7 @@ public class DAOImpl<T> implements DAO<T> {
     protected EntityManager manager;
 
     @Override
-    public void insert(T entidade) {
+    public void insere(T entidade) {
         try {
             this.manager.persist(entidade);
         } catch (Exception e) {
@@ -27,24 +27,24 @@ public class DAOImpl<T> implements DAO<T> {
     }
 
     @Override
-    public void update(T entidade) {
+    public void atualiza(T entidade) {
         this.manager.merge(entidade);
     }
 
     @Override
-    public void delete(T entidade) {
+    public void exclui(T entidade) {
         this.manager.remove(entidade);
     }
 
     @Override
-    public List<T> findAll() {
+    public List<T> buscaTodos() {
         CriteriaQuery<T> cq = manager.getCriteriaBuilder().createQuery(clazz);
         cq.select(cq.from(clazz));
         return manager.createQuery(cq).getResultList();
     }
 
     @Override
-    public T findById(Serializable id) {
+    public T buscaPorId(Serializable id) {
         return this.manager.find(clazz, id);
     }
 }

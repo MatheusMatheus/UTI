@@ -17,7 +17,7 @@ public class PacienteServiceImpl implements PacienteService {
     @Override
     public Response getPacientes() {
         try {
-            return Response.ok().entity(pacienteDAO.findAll()).build();
+            return Response.ok().entity(pacienteDAO.buscaTodos()).build();
 
         } catch (Exception e) {
             return Response.notModified().build();
@@ -36,7 +36,7 @@ public class PacienteServiceImpl implements PacienteService {
     @Override
     public Response getPaciente(Integer id) {
         try {
-            return Response.ok().entity(pacienteDAO.findById(id)).build();
+            return Response.ok().entity(pacienteDAO.buscaPorId(id)).build();
 
         } catch (Exception e) {
             return Response.notModified().build();
@@ -46,8 +46,8 @@ public class PacienteServiceImpl implements PacienteService {
 	@Override
 	public Response cadastrar(Paciente paciente) {
         try {
-        	pacienteDAO.insert(paciente);
-            return Response.noContent().status(Response.Status.ACCEPTED).build();
+        	pacienteDAO.insere(paciente);
+            return Response.ok().entity(paciente).status(Response.Status.ACCEPTED).build();
         } catch (Exception e) {
             return Response.notModified().build();
         }

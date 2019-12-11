@@ -1,0 +1,25 @@
+<fieldset>
+  <legend>Pacientes Cadastrados</legend>
+
+  <table>
+    <thead>
+      <tr>
+        <th>CPF</th>
+        <th>Nome</th>
+        <th>Bairro</th>
+        <th>Temperatura Atual</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let paciente of pacientes">
+        <td>{{paciente.cpf}}</td>
+        <td>{{paciente.nome}}</td>
+        <td>{{paciente.endereco.bairro}}</td>
+        <td>{{paciente.estadoPaciente.temperaturaAtual}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</fieldset>

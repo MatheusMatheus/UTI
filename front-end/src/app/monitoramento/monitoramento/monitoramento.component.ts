@@ -1,30 +1,33 @@
-import { Component, OnInit, OnChanges, SimpleChanges, Output } from '@angular/core';
+import { Component, OnInit, SimpleChanges } from '@angular/core';
 import { MonitoramentoService } from 'src/app/negocio/service/monitoramento.service';
 import { TerminalService } from 'src/app/negocio/service/terminal.service';
 import { MatDialog } from '@angular/material';
 import { CaixaDialogoComponent } from '../caixa-dialogo/caixa-dialogo.component';
-import { Terminal, StatusTerminal } from 'src/app/negocio/dominio/terminal';
+import { Terminal } from 'src/app/negocio/dominio/terminal';
 import { Monitoramento } from 'src/app/negocio/dominio/monitoramento';
 import { Paciente } from 'src/app/negocio/dominio/paciente';
 import { PacienteService } from 'src/app/negocio/service/paciente.service';
-import { Pressao } from 'src/app/negocio/dominio/pressao';
 import { AtributoMonitoravel } from '../atributo-monitoravel/atributo-monitoravel.component';
+import { CaixaDialogoOutroTerminalComponent } from '../caixa-dialogo-outro-terminal/caixa-dialogo-outro-terminal.component';
+import { RespostaPacienteMorrendo } from 'src/app/negocio/dominio/respostaPacienteMorrendo';
 
 @Component({
   selector: 'app-monitoramento',
   templateUrl: './monitoramento.component.html',
   styleUrls: ['./monitoramento.component.css']
 })
-export class MonitoramentoComponent implements OnInit, OnChanges {
+export class MonitoramentoComponent implements OnInit {
   constructor(
     private monitoraService: MonitoramentoService,
-    private terminalSerice: TerminalService,
+    private terminalService: TerminalService,
     private pacienteService: PacienteService,
     private dialog: MatDialog
   ) { }
 
   monitoramento: Monitoramento;
-  terminais: Terminal[];
+  monitoramentos: Monitoramento[];
+  terminaisLivres: Terminal[];
+  terminaisVinculados: Terminal[];
   pacientes: Paciente[];
   dataAtual: string;
 
@@ -37,11 +40,20 @@ export class MonitoramentoComponent implements OnInit, OnChanges {
       paciente: null,
     }
 
-    this.terminais = await this.terminalSerice.buscaTerminaisLivres().toPromise();
+    this.terminaisLivres = await this.terminalService.buscaTerminaisLivres().toPromise();
     this.pacientes = await this.pacienteService.buscaPacientesNaoMonitorados().toPromise();
 
+    this.abrirModalNovoMonitoramento();
+    this.atualizaData();
+  }
+
+  novoMonitoramento() {
+    this.abrirModalNovoMonitoramento();
+  }
+
+  async abrirModalNovoMonitoramento() {
     const dialogRef = this.dialog.open(CaixaDialogoComponent, {
-      data: { terminais: this.terminais, pacientes: this.pacientes },
+      data: { terminais: this.terminaisLivres, pacientes: this.pacientes },
       width: '250px',
       disableClose: true,
       autoFocus: true
@@ -51,11 +63,25 @@ export class MonitoramentoComponent implements OnInit, OnChanges {
       this.monitoramento.terminal = resultado.terminalSelecionado;
       this.monitoramento.paciente = resultado.pacienteSelecionado;
     });
-    this.atualizaData();
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
+  escolherOutroTerminal() {
+      this.abrirModalOutroTerminal();
+  }
 
+  async abrirModalOutroTerminal() {
+    this.terminaisVinculados = await this.terminalService.buscaTerminaisVinculados().toPromise();
+    const dialogRef = this.dialog.open(CaixaDialogoOutroTerminalComponent, {
+      data: { terminais: this.terminaisVinculados },
+      width: '250px',
+      disableClose: true,
+      autoFocus: true
+    });
+
+    let resultado = await dialogRef.afterClosed().toPromise();
+    if(resultado != null) {
+
+    }
   }
 
   atualizaData() {
@@ -66,9 +92,16 @@ export class MonitoramentoComponent implements OnInit, OnChanges {
     this.monitoramento.temperaturaConsultada = atributoMonitoravel.temperatura;
     this.monitoramento.pressaoConsultada = atributoMonitoravel.pressao;
     this.monitoramento.momentoConsulta = new Date().toLocaleString('pt-BR');
-    if (this.monitoramento.terminal !== null && this.monitoramento.paciente !== null) {
-      await this.monitoraService.gravaMonitoramento(this.monitoramento).toPromise();
+    
+    if (this.isAvailable()) {
+      let retorno = await this.monitoraService.gravaMonitoramento(this.monitoramento).toPromise();
+      console.log(retorno);
     }
 
+  }
+
+  isAvailable() {
+    return (this.monitoramento.paciente !== null && this.monitoramento.paciente.cpf !== "")
+      && (this.monitoramento.terminal !== null && this.monitoramento.terminal.mac !== "");
   }
 }

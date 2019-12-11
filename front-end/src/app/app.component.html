@@ -2,15 +2,20 @@
   <a routerLink="/terminal/cadastro"
   routerLinkActive
   #transfActive="routerLinkActive"
-  [ngClass]="{'active': transfActive.isActive}"
+
 >Terminal</a>
 
 <a routerLink="/paciente/cadastro"
      routerLinkActive
      [routerLinkActiveOptions]="{exact: true}"
      #clienteAtivo="routerLinkActive"
-     [ngClass]="{'active': clienteAtivo.isActive}"
   >Paciente</a>
+
+  <a routerLink="/monitoramento/monitoramento"
+     routerLinkActive
+     [routerLinkActiveOptions]="{exact: true}"
+     #clienteAtivo="routerLinkActive"
+  >Monitoramento</a>
 </div>
 
 

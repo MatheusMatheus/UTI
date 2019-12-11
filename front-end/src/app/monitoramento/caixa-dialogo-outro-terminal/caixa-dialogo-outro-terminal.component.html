@@ -1,0 +1,26 @@
+<div *ngIf="isAvailable()">
+  <form>
+    <h1 mat-dialog-title>Monitoramento de Paciente</h1>
+    <div mat-dialog-content>
+      <mat-form-field>
+        <mat-label>Selecione um terminal</mat-label>
+        <mat-select [(ngModel)]="terminal" name="terminal" required>
+          <mat-option *ngFor="let ter of data.terminais" [value]="ter">
+            {{ter.nome}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+      <button mat-raised-button [mat-dialog-close]="terminal" cdkFocusInitial>Ok</button>
+    </div>
+  </form>
+</div>
+
+
+<div *ngIf="!isAvailable()">
+  <h3 style="text-align: center;">Não há terminais monitorando pacientes.</h3>
+  <div mat-dialog-actions>
+    <button mat-raised-button [mat-dialog-close]="terminal" cdkFocusInitial>Ok</button>
+  </div>
+</div>

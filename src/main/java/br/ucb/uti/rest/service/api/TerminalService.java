@@ -16,14 +16,30 @@ import br.ucb.uti.rest.service.requisicoes.TerminalDTO;
 @Produces("application/json")
 @Consumes("application/json")
 public interface TerminalService{
+	
+    @POST
+    @Path("cadastrar")
+    Response cadastrar(TerminalDTO terminalDTO);
+    
+    @PUT
+    @Path("editar")
+    Response editar(TerminalDTO terminalDTO);
 
     @GET
     @Path("todos")
     Response getTerminais();
     
     @GET
+    @Path("desvinculados")
+    Response getTerminaisDesvinculados();
+    
+    @GET
+    @Path("vinculados")
+    Response getTerminaisVinculados();
+    
+    @GET
     @Path("livres")
-    Response getTerminaisLivres();
+    Response getTerminaisLivresParaMonitorar();
     
     @GET
     @Path("status/{status}")
@@ -33,10 +49,6 @@ public interface TerminalService{
     @Path("{id}")
     Response getTerminal(@PathParam("id") Integer id);
 
-    @POST
-    @Path("cadastrar")
-    Response cadastrar(TerminalDTO terminalDTO);
-    
     @PUT
     @Path("desvincula/{id}")
     Response desvincula(@PathParam("id") Integer id);

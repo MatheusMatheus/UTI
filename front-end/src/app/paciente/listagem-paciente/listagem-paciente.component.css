@@ -1,0 +1,32 @@
+table {
+    width: 100%;
+  }
+  
+  table tr th {
+    background-color: lightgray;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  table tr td,
+  th {
+    padding: 5px;
+    text-align: center;
+  }
+  
+  table tr:nth-child(odd) td {
+    background-color: #eee;
+  }
+  
+  table tr:hover td {
+    background-color: #ddf;
+  }
+  
+  .editar {
+    text-decoration: underline;
+  }
+  
+  .editar:hover {
+    cursor: pointer;
+  }
+  

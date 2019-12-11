@@ -29,8 +29,9 @@ export class TemperaturaComponent extends AtributoMonitoravelComponent implement
     return Number(n.toFixed(1));
   }
 
-  isAvailable(): boolean {
-    return this.monitoramento.paciente !== null && this.monitoramento.terminal !== null;
+  isAvailable() {
+    return (this.monitoramento.paciente !== null && this.monitoramento.paciente.cpf !== "")
+    && (this.monitoramento.terminal !== null && this.monitoramento.terminal.mac !== "");
   }
   
 }

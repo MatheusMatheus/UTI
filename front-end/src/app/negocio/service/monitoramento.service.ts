@@ -19,4 +19,11 @@ export class MonitoramentoService {
     console.log(monitoramento)
     return this.httpClient.post(url, monitoramento);
   }
+
+  public buscaMonitoramento(idTerminal: number): Observable<Array<Monitoramento>> {
+    let url = `${environment.baseURL}/monitoramento/historico/terminal/${idTerminal}`;
+    return this.httpClient.get<Array<Monitoramento>>(url);
+  }
 }
+
+
